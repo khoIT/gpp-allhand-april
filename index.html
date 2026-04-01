@@ -360,6 +360,32 @@
       line-height: 1.6
     }
 
+    /* VERTICAL FLOW VIZ */
+    .vf-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .vf-col{border-radius:14px;padding:16px 14px;position:relative}
+    .vf-col.bf{background:rgba(251,113,133,.04);border:1px solid rgba(251,113,133,.15)}
+    .vf-col.af{background:rgba(52,211,153,.04);border:1px solid rgba(52,211,153,.15)}
+    .vf-hdr{font-family:var(--fm);font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;font-weight:700}
+    .vf-list{display:flex;flex-direction:column;gap:0;position:relative;padding-left:22px}
+    .vf-list::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;border-radius:1px}
+    .vf-list.rl::before{background:rgba(251,113,133,.25)}
+    .vf-list.gl::before{background:rgba(52,211,153,.35)}
+    .vf-item{position:relative;padding:5px 0 5px 10px;display:flex;flex-wrap:wrap;align-items:center;gap:3px 6px}
+    .vf-item::before{content:'';position:absolute;left:-19px;top:11px;width:8px;height:8px;border-radius:50%;border:2px solid var(--t3);background:var(--bg)}
+    .vf-item.pain::before{border-color:var(--rose);background:rgba(251,113,133,.2);box-shadow:0 0 6px rgba(251,113,133,.3)}
+    .vf-item.cut::before{border-color:var(--rose);background:var(--rose)}
+    .vf-item.win::before{border-color:var(--green);background:rgba(52,211,153,.2);box-shadow:0 0 6px rgba(52,211,153,.3)}
+    .vf-name{font-size:11px;font-weight:600;line-height:1.3}
+    .vf-name.strike{text-decoration:line-through;opacity:.4}
+    .vf-badge{display:inline-flex;padding:1px 5px;border-radius:3px;font-family:var(--fm);font-size:7px;letter-spacing:.5px;font-weight:700;line-height:1.6}
+    .vf-badge.wait{background:rgba(251,113,133,.1);color:var(--rose)}
+    .vf-badge.rework{background:rgba(251,113,133,.15);color:var(--rose)}
+    .vf-badge.fast{background:rgba(52,211,153,.1);color:var(--green)}
+    .vf-badge.saved{background:rgba(247,201,72,.12);color:var(--warm)}
+    .vf-summary{margin-top:10px;padding:6px 10px;border-radius:8px;text-align:center;font-family:var(--fm);font-size:9px;letter-spacing:1px}
+    .vf-elim{margin-top:8px;padding:5px 8px;border-radius:6px;background:rgba(52,211,153,.06);border:1px dashed rgba(52,211,153,.2);font-family:var(--fm);font-size:8px;color:var(--green);letter-spacing:.5px;text-align:center}
+    @media(max-width:768px){.vf-wrap{grid-template-columns:1fr}}
+
     /* NAV ARROWS */
     .na {
       position: fixed;
@@ -845,8 +871,8 @@
         <p class="a3 ss" style="text-align:center;max-width:640px;font-size:clamp(14px,1.8vw,20px)"
           data-en="Four weeks of AI experimentation into a continuous discovery → delivery loop that collapsed timelines 5-10x."
           data-vi="Cách team Analytics biến 2 tháng thử nghiệm AI thành vòng lặp khám phá → chuyển giao liên tục, đẩy nhanh delivery 5-10x.">
-          How our Analytics team turned 2 months of AI experimentation into a continuous discovery → delivery loop that
-          collapsed timelines 5-10x.
+          How Analytics team turned 1 month of AI experimentation into a continuous discovery/delivery loop that
+          speed-up delivery 5-10x.
         </p>
         <div class="a4" style="margin-top:8px">
           <span style="font-family:var(--fm);font-size:10px;color:var(--t3);letter-spacing:1px"
@@ -887,24 +913,79 @@
               data-vi="Discovery → Delivery, hiếm khi lặp lại">Discovery → Delivery, rarely loops back</div>
           </div>
         </div>
-        <div class="a4 cpg">
-          <div class="cp bf">
-            <div class="cpl bl">❌ BEFORE</div>
-            <div class="cpt"
-              data-en="PM discovers idea → writes spec → aligns with UX design → waits for eng → builds → discovers spec was wrong → back to design → rewrites → repeat. Each handoff = days of waiting."
-              data-vi="PM phát hiện ý tưởng → viết spec → align với UX design → chờ eng → build → phát hiện spec sai → quay lại design → viết lại → lặp. Mỗi lần trao tay = ngày chờ.">
-              PM discovers idea → writes spec → aligns with UX design → waits for eng → builds → discovers spec was
-              wrong → back to design → rewrites → repeat. Each handoff = days of waiting.
+        <div class="a4 vf-wrap">
+          <!-- BEFORE -->
+          <div class="vf-col bf">
+            <div class="vf-hdr" style="color:var(--rose)" data-en="❌ BEFORE — THE SLOW HANDOFF CHAIN" data-vi="❌ TRƯỚC — CHUỖI TRAO TAY CHẬM CHẠP">❌ BEFORE — THE SLOW HANDOFF CHAIN</div>
+            <div class="vf-list rl">
+              <div class="vf-item">
+                <span class="vf-name" data-en="PM discovers idea" data-vi="PM phát hiện ý tưởng">PM discovers idea</span>
+              </div>
+              <div class="vf-item pain">
+                <span class="vf-name" data-en="Writes spec" data-vi="Viết spec">Writes spec</span>
+                <span class="vf-badge wait">~1 WEEK</span>
+                <span class="vf-badge saved">⚡ CAN SAVE</span>
+              </div>
+              <div class="vf-item pain">
+                <span class="vf-name" data-en="Aligns with UX design" data-vi="Align với UX design">Aligns with UX design</span>
+                <span class="vf-badge wait">~1 WEEK</span>
+                <span class="vf-badge saved">⚡ CAN SAVE</span>
+              </div>
+              <div class="vf-item pain">
+                <span class="vf-name" data-en="Waits for engineering" data-vi="Chờ engineering">Waits for engineering</span>
+                <span class="vf-badge wait">DAYS BLOCKED</span>
+                <span class="vf-badge saved">⚡ CAN SAVE</span>
+              </div>
+              <div class="vf-item">
+                <span class="vf-name" data-en="Engineering builds" data-vi="Engineering build">Engineering builds</span>
+                <span class="vf-badge wait">WEEKS</span>
+              </div>
+              <div class="vf-item cut">
+                <span class="vf-name strike" data-en="Discovers spec was wrong" data-vi="Phát hiện spec sai">Discovers spec was wrong</span>
+                <span class="vf-badge rework">REWORK</span>
+              </div>
+              <div class="vf-item cut">
+                <span class="vf-name strike" data-en="Back to design" data-vi="Quay lại design">Back to design</span>
+                <span class="vf-badge rework">REWORK</span>
+              </div>
+              <div class="vf-item cut">
+                <span class="vf-name strike" data-en="Rewrites" data-vi="Viết lại">Rewrites</span>
+                <span class="vf-badge rework">REWORK</span>
+              </div>
+              <div class="vf-item cut">
+                <span class="vf-name strike" data-en="Repeat…" data-vi="Lặp lại…">Repeat…</span>
+                <span class="vf-badge rework">ENDLESS LOOP</span>
+              </div>
             </div>
+            <div class="vf-summary" style="background:rgba(251,113,133,.06);color:var(--rose)" data-en="TOTAL: 10–12 WEEKS · EACH HANDOFF = DAYS" data-vi="TỔNG: 10–12 TUẦN · MỖI LẦN TRAO TAY = NGÀY">TOTAL: 10–12 WEEKS · EACH HANDOFF = DAYS</div>
           </div>
-          <div class="cp af">
-            <div class="cpl al">✅ AFTER — THE VISION</div>
-            <div class="cpt"
-              data-en="PM vibe-codes concept → designer reviews & refines in real-time → stakeholders align in hours → engineers ship with agents in days → PM discovers what's next → continuous loop."
-              data-vi="PM vibe-code concept → designer review & tinh chỉnh real-time → stakeholder align trong giờ → engineer ship bằng agents trong ngày → PM khám phá tiếp → vòng lặp liên tục.">
-              PM vibe-codes concept → designer reviews & refines in real-time → stakeholders align in hours → engineers
-              ship with agents in days → PM discovers what's next → continuous loop.
+          <!-- AFTER -->
+          <div class="vf-col af">
+            <div class="vf-hdr" style="color:var(--green)" data-en="✅ AFTER — THE VISION" data-vi="✅ SAU — TẦM NHÌN">✅ AFTER — THE VISION</div>
+            <div class="vf-list gl">
+              <div class="vf-item win">
+                <span class="vf-name" data-en="PM vibe-codes concept" data-vi="PM vibe-code concept">PM vibe-codes concept</span>
+                <span class="vf-badge fast">⚡ HOURS</span>
+              </div>
+              <div class="vf-item win">
+                <span class="vf-name" data-en="Designer reviews & refines real-time" data-vi="Designer review & tinh chỉnh real-time">Designer reviews & refines real-time</span>
+                <span class="vf-badge fast">⚡ SAME DAY</span>
+              </div>
+              <div class="vf-item win">
+                <span class="vf-name" data-en="Stakeholders align" data-vi="Stakeholder align">Stakeholders align</span>
+                <span class="vf-badge fast">⚡ HOURS</span>
+              </div>
+              <div class="vf-item win">
+                <span class="vf-name" data-en="Engineers ship with agents" data-vi="Engineer ship bằng agents">Engineers ship with agents</span>
+                <span class="vf-badge fast">⚡ DAYS</span>
+              </div>
+              <div class="vf-item win">
+                <span class="vf-name" data-en="PM discovers what's next" data-vi="PM khám phá tiếp">PM discovers what's next</span>
+                <span class="vf-badge fast">🔄 CONTINUOUS</span>
+              </div>
             </div>
+            <div class="vf-summary" style="background:rgba(52,211,153,.06);color:var(--green)" data-en="TOTAL: 1–2 WEEKS · CONTINUOUS LOOP" data-vi="TỔNG: 1–2 TUẦN · VÒNG LẶP LIÊN TỤC">TOTAL: 1–2 WEEKS · CONTINUOUS LOOP</div>
+            <div class="vf-elim" data-en="🚫 REWORK LOOP ELIMINATED — PROTOTYPE CATCHES ISSUES EARLY" data-vi="🚫 VÒNG LẶP SỬA LỖI LOẠI BỎ — PROTOTYPE PHÁT HIỆN VẤN ĐỀ SỚM">🚫 REWORK LOOP ELIMINATED — PROTOTYPE CATCHES ISSUES EARLY</div>
           </div>
         </div>
         <div class="a5 qb"><span
@@ -978,24 +1059,28 @@
           data-vi="Từ Tài Liệu Spec Sang <span class='hl'>Prototype Chạy Được</span> Trong Giờ">
           From Spec Document to <span class="hl">Working Prototype</span> in Hours
         </h2>
-        <div class="a3 cpg">
-          <div class="cp bf">
-            <div class="cpl bl" data-en="❌ OLD WAY — 3-4 WEEKS" data-vi="❌ CÁCH CŨ — 3-4 TUẦN">❌ OLD WAY — 3-4 WEEKS
-            </div>
-            <div class="cpt"
-              data-en="Write PRD (1w) → Design review (1w) → Stakeholder feedback on docs (1w) → Revise → Re-align → Finally start building"
-              data-vi="Viết PRD (1t) → Review thiết kế (1t) → Stakeholder feedback trên docs (1t) → Chỉnh sửa → Align lại → Cuối cùng mới build">
-              Write PRD (1w) → Design review (1w) → Stakeholder feedback on docs (1w) → Revise → Re-align → Finally
-              start building
+        <div class="a3 cg cg2">
+          <div class="c" style="border-left:3px solid var(--hot)">
+            <div class="ct" data-en="Your Vibe-Coding Recipe" data-vi="Công Thức Vibe-Coding">🧪 Your Vibe-Coding Recipe</div>
+            <div class="cd"
+              data-en="① Start with the user story — not a feature list<br>② Describe the outcome: 'A page where managers see team velocity and drill into sprints'<br>③ Iterate visually: 'Make the chart more prominent' beats 'Change the CSS'<br>④ Your prototype IS the spec — show it, don't document it"
+              data-vi="① Bắt đầu từ user story — không phải danh sách feature<br>② Mô tả kết quả: 'Trang nơi manager thấy velocity và drill vào sprint'<br>③ Iterate trực quan: 'Làm chart nổi bật hơn' tốt hơn 'Sửa CSS'<br>④ Prototype của bạn LÀ spec — show, đừng viết docs">
+              ① Start with the user story — not a feature list<br>
+              ② Describe the outcome: "A page where managers see team velocity and drill into sprints"<br>
+              ③ Iterate visually: "Make the chart more prominent" beats "Change the CSS"<br>
+              ④ Your prototype IS the spec — show it, don't document it
             </div>
           </div>
-          <div class="cp af">
-            <div class="cpl al" data-en="✅ VIBE CODE — HOURS" data-vi="✅ VIBE CODE — VÀI GIỜ">✅ VIBE CODE — HOURS</div>
-            <div class="cpt"
-              data-en="PM describes concept to AI → gets working UI → walks stakeholder through interactive demo → aligns on the spot → engineering starts same week"
-              data-vi="PM mô tả concept cho AI → có UI chạy → cho stakeholder dùng thử → align ngay tại chỗ → engineering bắt đầu cùng tuần">
-              PM describes concept to AI → gets working UI → walks stakeholder through interactive demo → aligns on the
-              spot → engineering starts same week
+          <div class="c" style="border-left:3px solid var(--warm)">
+            <div class="ct" data-en="Artifacts You Can Vibe-Code" data-vi="Artifacts Bạn Có Thể Vibe-Code">🎨Artifacts You Can Vibe-Code</div>
+            <div class="cd"
+              data-en="• Interactive prototypes — clickable UIs, not wireframes<br>• Data dashboards — with mock data stakeholders can explore<br>• Workflow demos — multi-step flows users can walk through<br>• Concept comparisons — A/B variants to discuss trade-offs<br>• Journey maps — visual paths through your product"
+              data-vi="• Prototype tương tác — UI click được, không phải wireframe<br>• Dashboard dữ liệu — với mock data stakeholder khám phá được<br>• Demo workflow — flow nhiều bước user thử được<br>• So sánh concept — A/B variants thảo luận trade-off<br>• Bản đồ hành trình — đường đi trực quan qua sản phẩm">
+              • Interactive prototypes — clickable UIs, not wireframes<br>
+              • Data dashboards — with mock data stakeholders can explore<br>
+              • Workflow demos — multi-step flows users can walk through<br>
+              • Concept comparisons — A/B variants to discuss trade-offs<br>
+              • Journey maps — visual paths through your product
             </div>
           </div>
         </div>
@@ -1095,12 +1180,6 @@
             </div>
           </div>
         </div>
-        <!-- SCREENSHOT PLACEHOLDER -->
-        <div class="a5 media-ph" style="min-height:100px;padding:16px">
-          <div class="ph-icon">📸</div>
-          <div class="ph-label" data-en="Screenshot: Agent-Assisted Delivery Workflow"
-            data-vi="Ảnh: Workflow Delivery Với Agent">Screenshot: Agent-Assisted Delivery Workflow</div>
-        </div>
       </div>
     </div>
 
@@ -1114,12 +1193,47 @@
           data-vi="Agents Như <span class='hl'>Bạn Đồng Hành Khám Phá</span>">
           Agents as <span class="hl">Discovery Companions</span>
         </h2>
-        <p class="a3 sb"
-          data-en="PM uses AI agents directly on the production codebase to explore data patterns, surface insights, and discover what to build next — then prioritize → backlog → vibe-code the next concept."
-          data-vi="PM dùng AI agents trực tiếp trên production codebase để khám phá data patterns, đưa ra insights, và phát hiện cần build gì tiếp — rồi ưu tiên → backlog → vibe-code concept tiếp.">
-          PM uses AI agents directly on the production codebase to explore data patterns, surface insights, and discover
-          what to build next — then prioritize → backlog → vibe-code the next concept.
-        </p>
+        <div class="a3" style="display:flex;align-items:stretch;gap:0;justify-content:center;flex-wrap:wrap;width:100%">
+          <div style="display:flex;align-items:center;gap:8px;background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.18);border-radius:10px 0 0 10px;padding:10px 14px">
+            <span style="font-size:18px">🤖</span>
+            <div>
+              <div style="font-family:var(--fm);font-size:10px;font-weight:700;color:var(--green);letter-spacing:.5px" data-en="EXPLORE CODEBASE" data-vi="KHÁM PHÁ CODEBASE">EXPLORE CODEBASE</div>
+              <div style="font-size:9px;color:var(--t3);line-height:1.3" data-en="Agents navigate production code" data-vi="Agents duyệt production code">Agents navigate production code</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;font-size:14px;color:var(--green);padding:0 2px">›</div>
+          <div style="display:flex;align-items:center;gap:8px;background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.18);border-top:1px solid rgba(52,211,153,.18);border-bottom:1px solid rgba(52,211,153,.18);padding:10px 14px">
+            <span style="font-size:18px">📊</span>
+            <div>
+              <div style="font-family:var(--fm);font-size:10px;font-weight:700;color:var(--green);letter-spacing:.5px" data-en="SURFACE PATTERNS" data-vi="TÌM PATTERNS">SURFACE PATTERNS</div>
+              <div style="font-size:9px;color:var(--t3);line-height:1.3" data-en="Data patterns & insights emerge" data-vi="Data patterns & insights nổi lên">Data patterns &amp; insights emerge</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;font-size:14px;color:var(--green);padding:0 2px">›</div>
+          <div style="display:flex;align-items:center;gap:8px;background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.18);padding:10px 14px">
+            <span style="font-size:18px">💡</span>
+            <div>
+              <div style="font-family:var(--fm);font-size:10px;font-weight:700;color:var(--cool);letter-spacing:.5px" data-en="DISCOVER NEXT" data-vi="PHÁT HIỆN TIẾP">DISCOVER NEXT</div>
+              <div style="font-size:9px;color:var(--t3);line-height:1.3" data-en="What to build next" data-vi="Cần build gì tiếp">What to build next</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;font-size:14px;color:var(--warm);padding:0 2px">›</div>
+          <div style="display:flex;align-items:center;gap:8px;background:rgba(247,201,72,.06);border:1px solid rgba(247,201,72,.18);padding:10px 14px">
+            <span style="font-size:18px">📋</span>
+            <div>
+              <div style="font-family:var(--fm);font-size:10px;font-weight:700;color:var(--warm);letter-spacing:.5px" data-en="PRIORITIZE" data-vi="ƯU TIÊN">PRIORITIZE</div>
+              <div style="font-size:9px;color:var(--t3);line-height:1.3" data-en="Rank → backlog" data-vi="Xếp hạng → backlog">Rank → backlog</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;font-size:14px;color:var(--hot);padding:0 2px">›</div>
+          <div style="display:flex;align-items:center;gap:8px;background:rgba(255,107,53,.06);border:1px solid rgba(255,107,53,.18);border-radius:0 10px 10px 0;padding:10px 14px">
+            <span style="font-size:18px">🎨</span>
+            <div>
+              <div style="font-family:var(--fm);font-size:10px;font-weight:700;color:var(--hot);letter-spacing:.5px" data-en="VIBE-CODE" data-vi="VIBE-CODE">VIBE-CODE</div>
+              <div style="font-size:9px;color:var(--t3);line-height:1.3" data-en="Next concept → loop continues" data-vi="Concept tiếp → loop tiếp tục">Next concept → loop continues</div>
+            </div>
+          </div>
+        </div>
         <!-- EMBEDDED VIDEO -->
         <div class="a4" style="display:flex;justify-content:center">
           <div class="video-wrap">
@@ -1225,206 +1339,16 @@
             </div>
           </div>
         </div>
-        <!-- BEFORE/AFTER INSIGHTS SUMMARY -->
-        <div class="a5" style="width:100%">
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%">
-            <div style="background:rgba(255,107,53,.06);border:1px solid rgba(255,107,53,.2);border-radius:12px;padding:14px">
-              <div style="font-family:var(--fm);font-size:8px;letter-spacing:2px;color:var(--hot);margin-bottom:6px"
-                data-en="① PM VIBE CODE" data-vi="① PM VIBE CODE">① PM VIBE CODE</div>
-              <div style="font-size:11px;color:var(--t1);line-height:1.5"
-                data-en="PRD + design review (3–4w) → working prototype in hours. Stakeholders align on interactive demos, not docs."
-                data-vi="PRD + review thiết kế (3–4t) → prototype chạy trong giờ. Stakeholder align trên demo tương tác, không phải docs.">
-                PRD + design review (3–4w) → working prototype in hours. Stakeholders align on interactive demos, not docs.
-              </div>
-            </div>
-            <div style="background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.2);border-radius:12px;padding:14px">
-              <div style="font-family:var(--fm);font-size:8px;letter-spacing:2px;color:var(--cool);margin-bottom:6px"
-                data-en="② ENGINEER + AGENTS" data-vi="② ENGINEER + AGENTS">② ENGINEER + AGENTS</div>
-              <div style="font-size:11px;color:var(--t1);line-height:1.5"
-                data-en="Agents handle scaffold, tests, migrations. Engineers own architecture & quality. 10–12w delivery → ~2w."
-                data-vi="Agents lo scaffold, test, migration. Engineer giữ kiến trúc & chất lượng. Delivery 10–12t → ~2t.">
-                Agents handle scaffold, tests, migrations. Engineers own architecture & quality. 10–12w delivery → ~2w.
-              </div>
-            </div>
-            <div style="background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.2);border-radius:12px;padding:14px">
-              <div style="font-family:var(--fm);font-size:8px;letter-spacing:2px;color:var(--green);margin-bottom:6px"
-                data-en="③ CONTINUOUS DISCOVERY" data-vi="③ KHÁM PHÁ LIÊN TỤC">③ CONTINUOUS DISCOVERY</div>
-              <div style="font-size:11px;color:var(--t1);line-height:1.5"
-                data-en="PM explores production codebase with agents — surfaces data patterns & feature ideas without pulling engineers. Discovery is now parallel, not quarterly."
-                data-vi="PM khám phá production codebase với agents — tìm data patterns & ý tưởng feature mà không kéo engineer. Discovery giờ song song, không theo quý.">
-                PM explores production codebase with agents — surfaces data patterns & feature ideas without pulling engineers. Discovery is now parallel, not quarterly.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== 08: INTELLIGENT AI USE — CONNECTING THE FRAMEWORK ===== -->
-    <div class="s" data-slide="8">
-      <div class="go gc" style="top:20%;left:-150px"></div>
-      <div class="si">
-        <div class="a1 st" data-en="THE PRINCIPLE" data-vi="NGUYÊN TẮC">THE PRINCIPLE</div>
-        <h2 class="a2 sh" data-en="Using AI <span class='hl'>Intelligently</span> — Not Blindly"
-          data-vi="Dùng AI <span class='hl'>Thông Minh</span> — Không Mù Quáng">
-          Using AI <span class="hl">Intelligently</span> — Not Blindly
-        </h2>
-        <p class="a3 sb"
-          data-en="Speed without judgment is just faster mistakes. Here's how each step of our loop maps to intelligent AI use."
-          data-vi="Nhanh mà thiếu phán đoán chỉ là mắc lỗi nhanh hơn. Đây là cách mỗi bước trong vòng lặp ánh xạ với việc dùng AI thông minh.">
-          Speed without judgment is just faster mistakes. Here's how each step of our loop maps to intelligent AI use.
-        </p>
-        <div class="a4 cg cg3">
-          <div class="c" style="border-top:3px solid var(--hot)">
-            <div class="ci">🎨</div>
-            <div class="ct" data-en="PM Vibe Code" data-vi="PM Vibe Code">PM Vibe Code</div>
-            <div class="cd"
-              data-en="Zone 1 (DRAG): Drafting UI, generating boilerplate. PM's product sense (Zone 2) decides WHAT to build — AI handles HOW to scaffold it."
-              data-vi="Vùng 1 (DRAG): Soạn UI, tạo boilerplate. Product sense của PM (Vùng 2) quyết định build CÁI GÌ — AI lo scaffold NHƯ THẾ NÀO.">
-              Zone 1 (DRAG): Drafting UI, generating boilerplate. PM's product sense (Zone 2) decides WHAT to build — AI
-              handles HOW to scaffold it.
-            </div>
-          </div>
-          <div class="c" style="border-top:3px solid var(--cool)">
-            <div class="ci">🤖</div>
-            <div class="ct" data-en="Engineer + Agents" data-vi="Engineer + Agents">Engineer + Agents</div>
-            <div class="cd"
-              data-en="Intelligent Hill: Engineers climb from zero-shot to agent orchestration. Key: provide context (few-shot), decompose tasks (Zone 1.5), keep architecture decisions human."
-              data-vi="Ngọn Đồi Thông Minh: Engineer leo từ zero-shot đến điều phối agent. Chìa khóa: cung cấp context (few-shot), tách nhỏ task (Vùng 1.5), giữ quyết định kiến trúc cho người.">
-              Intelligent Hill: Engineers climb from zero-shot to agent orchestration. Key: provide context (few-shot),
-              decompose tasks (Zone 1.5), keep architecture decisions human.
-            </div>
-          </div>
-          <div class="c" style="border-top:3px solid var(--green)">
-            <div class="ci">🔍</div>
-            <div class="ct" data-en="PM Explores" data-vi="PM Khám Phá">PM Explores</div>
-            <div class="cd"
-              data-en="Intelligent Fool: PM asks 'naive' questions to the codebase via agents — building the same mental model that end-users have. Foolish questions → better product."
-              data-vi="Kẻ Ngốc Thông Minh: PM hỏi câu 'ngây thơ' cho codebase qua agents — xây mental model giống end-user. Câu hỏi ngốc → product tốt hơn.">
-              Intelligent Fool: PM asks "naive" questions to the codebase via agents — building the same mental model
-              that end-users have. Foolish questions → better product.
-            </div>
-          </div>
-        </div>
         <div class="a5 qb"><span
-            data-en="🧠 AI amplifies what's already there. If you have good judgment, AI makes you dangerous. If you don't, AI makes you dangerously wrong — faster."
-            data-vi="🧠 AI khuếch đại những gì đã có. Nếu bạn phán đoán tốt, AI khiến bạn nguy hiểm. Nếu không, AI khiến bạn sai nguy hiểm — nhanh hơn.">
-            🧠 AI amplifies what's already there. If you have good judgment, AI makes you dangerous. If you don't, AI
-            makes you dangerously wrong — faster.
+            data-en="These numbers aren't the end state — they're the first lap. Each loop iteration compounds: faster discovery → better concepts → tighter delivery → more time to discover."
+            data-vi="Những con số này không phải trạng thái cuối — đó là vòng đầu tiên. Mỗi vòng lặp cộng dồn: discovery nhanh hơn → concept tốt hơn → delivery chặt hơn → nhiều thời gian discover hơn.">
+            These numbers aren't the end state — they're the first lap. Each loop iteration compounds: faster discovery → better concepts → tighter delivery → more time to discover.
           </span></div>
       </div>
     </div>
 
-    <!-- ===== 09: DECISION FRAMEWORK ===== -->
-    <div class="s" data-slide="9">
-      <div class="go gh" style="top:40%;right:-100px"></div>
-      <div class="si" style="align-items:center">
-        <div class="a1 st" data-en="YOUR PLAYBOOK" data-vi="CẨM NANG">YOUR PLAYBOOK</div>
-        <h2 class="a2 sh" style="text-align:center"
-          data-en="When to <span class='hl'>Vibe Code</span> vs <span class='hl'>Deep Think</span>"
-          data-vi="Khi Nào <span class='hl'>Vibe Code</span> Khi Nào <span class='hl'>Suy Nghĩ Sâu</span>">
-          When to <span class="hl">Vibe Code</span> vs <span class="hl">Deep Think</span>
-        </h2>
-        <div class="a3" style="width:100%;display:flex;justify-content:center">
-          <svg viewBox="0 0 700 290" xmlns="http://www.w3.org/2000/svg" style="max-width:700px;width:100%;height:auto">
-            <defs>
-              <filter id="gl3">
-                <feGaussianBlur stdDeviation="2" result="b" />
-                <feMerge>
-                  <feMergeNode in="b" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
-            <!-- Question -->
-            <rect x="150" y="10" width="400" height="50" rx="12" fill="rgba(247,201,72,.08)" stroke="#f7c948"
-              stroke-width="2" />
-            <text x="350" y="32" text-anchor="middle" fill="#f7c948" font-family="Be Vietnam Pro" font-weight="600"
-              font-size="11" data-en="🤔 Is this about WHAT to build or HOW to build it?"
-              data-vi="🤔 Đây là về XÂY CÁI GÌ hay XÂY NHƯ THẾ NÀO?">🤔 Is this about WHAT to build or HOW to build
-              it?</text>
-            <text x="350" y="48" text-anchor="middle" fill="#f7c948" font-family="Be Vietnam Pro" font-weight="600"
-              font-size="10" data-en="(strategy vs execution)" data-vi="(chiến lược vs thực thi)">(strategy vs
-              execution)</text>
-
-            <!-- Arrows -->
-            <line x1="225" y1="60" x2="150" y2="100" stroke="#fb7185" stroke-width="2" />
-            <text x="170" y="82" fill="#fb7185" font-family="Space Mono" font-size="9" font-weight="700" data-en="WHAT"
-              data-vi="CÁI GÌ">WHAT</text>
-            <line x1="350" y1="60" x2="350" y2="100" stroke="#f7c948" stroke-width="2" />
-            <text x="370" y="82" fill="#f7c948" font-family="Space Mono" font-size="9" font-weight="700" data-en="BOTH"
-              data-vi="CẢ HAI">BOTH</text>
-            <line x1="475" y1="60" x2="550" y2="100" stroke="#34d399" stroke-width="2" />
-            <text x="530" y="82" fill="#34d399" font-family="Space Mono" font-size="9" font-weight="700" data-en="HOW"
-              data-vi="THẾ NÀO">HOW</text>
-
-            <!-- Box: Deep Think -->
-            <rect x="30" y="100" width="240" height="75" rx="12" fill="rgba(251,113,133,.08)" stroke="#fb7185"
-              stroke-width="2" filter="url(#gl3)" />
-            <text x="150" y="124" text-anchor="middle" fill="#fb7185" font-family="Be Vietnam Pro" font-weight="800"
-              font-size="14">🧠</text>
-            <text x="150" y="142" text-anchor="middle" fill="#f1f5f9" font-family="Be Vietnam Pro" font-weight="700"
-              font-size="11" data-en="Deep Think — You Lead" data-vi="Suy Nghĩ Sâu — Bạn Dẫn">Deep Think — You
-              Lead</text>
-            <text x="150" y="160" text-anchor="middle" fill="#94a3b8" font-family="Space Mono" font-size="7"
-              data-en="Product strategy, user research, priorities"
-              data-vi="Chiến lược product, user research, ưu tiên">Product strategy, user research, priorities</text>
-
-            <!-- Box: Decompose -->
-            <rect x="290" y="100" width="120" height="75" rx="12" fill="rgba(247,201,72,.08)" stroke="#f7c948"
-              stroke-width="2" filter="url(#gl3)" />
-            <text x="350" y="124" text-anchor="middle" fill="#f7c948" font-family="Be Vietnam Pro" font-weight="800"
-              font-size="14">⚡</text>
-            <text x="350" y="142" text-anchor="middle" fill="#f1f5f9" font-family="Be Vietnam Pro" font-weight="700"
-              font-size="11" data-en="Decompose" data-vi="Tách Nhỏ">Decompose</text>
-            <text x="350" y="158" text-anchor="middle" fill="#94a3b8" font-family="Space Mono" font-size="7"
-              data-en="Split into parts" data-vi="Tách thành phần">Split into parts</text>
-
-            <!-- Box: Vibe Code / Agents -->
-            <rect x="430" y="100" width="240" height="75" rx="12" fill="rgba(52,211,153,.08)" stroke="#34d399"
-              stroke-width="2" filter="url(#gl3)" />
-            <text x="550" y="124" text-anchor="middle" fill="#34d399" font-family="Be Vietnam Pro" font-weight="800"
-              font-size="14">🤖</text>
-            <text x="550" y="142" text-anchor="middle" fill="#f1f5f9" font-family="Be Vietnam Pro" font-weight="700"
-              font-size="11" data-en="Vibe Code / Agents" data-vi="Vibe Code / Agents">Vibe Code / Agents</text>
-            <text x="550" y="160" text-anchor="middle" fill="#94a3b8" font-family="Space Mono" font-size="7"
-              data-en="Scaffold, boilerplate, explore, prototype"
-              data-vi="Scaffold, boilerplate, khám phá, prototype">Scaffold, boilerplate, explore, prototype</text>
-
-            <!-- Decompose arrows -->
-            <line x1="320" y1="175" x2="200" y2="210" stroke="#f7c948" stroke-width="1.5" stroke-dasharray="4 3" />
-            <line x1="380" y1="175" x2="500" y2="210" stroke="#f7c948" stroke-width="1.5" stroke-dasharray="4 3" />
-
-            <!-- Sub-boxes -->
-            <rect x="80" y="210" width="240" height="42" rx="8" fill="rgba(251,113,133,.05)" stroke="#fb7185"
-              stroke-width="1" />
-            <text x="200" y="230" text-anchor="middle" fill="#fb7185" font-family="Be Vietnam Pro" font-weight="600"
-              font-size="9" data-en="WHAT parts → You think deeply" data-vi="Phần CÁI GÌ → Bạn suy nghĩ sâu">WHAT parts
-              → You think deeply</text>
-            <text x="200" y="244" text-anchor="middle" fill="#64748b" font-family="Space Mono" font-size="7"
-              data-en="metrics, UX, architecture" data-vi="metrics, UX, kiến trúc">metrics, UX, architecture</text>
-
-            <rect x="380" y="210" width="240" height="42" rx="8" fill="rgba(52,211,153,.05)" stroke="#34d399"
-              stroke-width="1" />
-            <text x="500" y="230" text-anchor="middle" fill="#34d399" font-family="Be Vietnam Pro" font-weight="600"
-              font-size="9" data-en="HOW parts → Agents + Vibe Code" data-vi="Phần THẾ NÀO → Agents + Vibe Code">HOW
-              parts → Agents + Vibe Code</text>
-            <text x="500" y="244" text-anchor="middle" fill="#64748b" font-family="Space Mono" font-size="7"
-              data-en="scaffold, tests, mock data" data-vi="scaffold, tests, mock data">scaffold, tests, mock
-              data</text>
-
-            <!-- Annotation -->
-            <text x="350" y="280" text-anchor="middle" fill="#475569" font-family="Space Mono" font-size="8"
-              letter-spacing="1" data-en="↑ Most tasks have BOTH — decompose first, always"
-              data-vi="↑ Hầu hết task có CẢ HAI — luôn tách nhỏ trước">↑ Most tasks have BOTH — decompose first,
-              always</text>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== 10: INTELLIGENT LAZINESS + DRAG ===== -->
-    <div class="s" data-slide="10">
+    <!-- ===== 08: INTELLIGENT LAZINESS + DRAG ===== -->
+    <div class="s" data-slide="8">
       <div class="go gh" style="bottom:-100px;left:40%"></div>
       <div class="si">
         <div class="a1 st" data-en="YOUR PLAYBOOK — WHAT TO OUTSOURCE" data-vi="CẨM NANG — OUTSOURCE GÌ CHO AI">YOUR
@@ -1554,6 +1478,169 @@
       </div>
     </div>
 
+    <!-- ===== 09: INTELLIGENT AI USE — CONNECTING THE FRAMEWORK ===== -->
+    <div class="s" data-slide="9">
+      <div class="go gc" style="top:20%;left:-150px"></div>
+      <div class="si">
+        <div class="a1 st" data-en="THE PRINCIPLE" data-vi="NGUYÊN TẮC">THE PRINCIPLE</div>
+        <h2 class="a2 sh" data-en="Using AI <span class='hl'>Intelligently</span> — Not Blindly"
+          data-vi="Dùng AI <span class='hl'>Thông Minh</span> — Không Mù Quáng">
+          Using AI <span class="hl">Intelligently</span> — Not Blindly
+        </h2>
+        <p class="a3 sb"
+          data-en="Speed without judgment is just faster mistakes. Here's how each step of our loop maps to intelligent AI use."
+          data-vi="Nhanh mà thiếu phán đoán chỉ là mắc lỗi nhanh hơn. Đây là cách mỗi bước trong vòng lặp ánh xạ với việc dùng AI thông minh.">
+          Speed without judgment is just faster mistakes. Here's how each step of our loop maps to intelligent AI use.
+        </p>
+        <div class="a4 cg cg3">
+          <div class="c" style="border-top:3px solid var(--hot)">
+            <div class="ci">🎨</div>
+            <div class="ct" data-en="PM Vibe Code" data-vi="PM Vibe Code">PM Vibe Code</div>
+            <div class="cd"
+              data-en="Zone 1 (DRAG): Drafting UI, generating boilerplate. PM's product sense (Zone 2) decides WHAT to build — AI handles HOW to scaffold it."
+              data-vi="Vùng 1 (DRAG): Soạn UI, tạo boilerplate. Product sense của PM (Vùng 2) quyết định build CÁI GÌ — AI lo scaffold NHƯ THẾ NÀO.">
+              Zone 1 (DRAG): Drafting UI, generating boilerplate. PM's product sense (Zone 2) decides WHAT to build — AI
+              handles HOW to scaffold it.
+            </div>
+          </div>
+          <div class="c" style="border-top:3px solid var(--cool)">
+            <div class="ci">🤖</div>
+            <div class="ct" data-en="Engineer + Agents" data-vi="Engineer + Agents">Engineer + Agents</div>
+            <div class="cd"
+              data-en="Intelligent Hill: Engineers climb from zero-shot to agent orchestration. Key: provide context (few-shot), decompose tasks (Zone 1.5), keep architecture decisions human."
+              data-vi="Ngọn Đồi Thông Minh: Engineer leo từ zero-shot đến điều phối agent. Chìa khóa: cung cấp context (few-shot), tách nhỏ task (Vùng 1.5), giữ quyết định kiến trúc cho người.">
+              Intelligent Hill: Engineers climb from zero-shot to agent orchestration. Key: provide context (few-shot),
+              decompose tasks (Zone 1.5), keep architecture decisions human.
+            </div>
+          </div>
+          <div class="c" style="border-top:3px solid var(--green)">
+            <div class="ci">🔍</div>
+            <div class="ct" data-en="PM Explores" data-vi="PM Khám Phá">PM Explores</div>
+            <div class="cd"
+              data-en="Intelligent Fool: PM asks 'naive' questions to the codebase via agents — building the same mental model that end-users have. Foolish questions → better product."
+              data-vi="Kẻ Ngốc Thông Minh: PM hỏi câu 'ngây thơ' cho codebase qua agents — xây mental model giống end-user. Câu hỏi ngốc → product tốt hơn.">
+              Intelligent Fool: PM asks "naive" questions to the codebase via agents — building the same mental model
+              that end-users have. Foolish questions → better product.
+            </div>
+          </div>
+        </div>
+        <div class="a5 qb"><span
+            data-en="🧠 AI amplifies what's already there. If you have good judgment, AI makes you dangerous. If you don't, AI makes you dangerously wrong — faster."
+            data-vi="🧠 AI khuếch đại những gì đã có. Nếu bạn phán đoán tốt, AI khiến bạn nguy hiểm. Nếu không, AI khiến bạn sai nguy hiểm — nhanh hơn.">
+            🧠 AI amplifies what's already there. If you have good judgment, AI makes you dangerous. If you don't, AI
+            makes you dangerously wrong — faster.
+          </span></div>
+      </div>
+    </div>
+
+    <!-- ===== 10: DECISION FRAMEWORK ===== -->
+    <div class="s" data-slide="10">
+      <div class="go gh" style="top:40%;right:-100px"></div>
+      <div class="si" style="align-items:center">
+        <div class="a1 st" data-en="YOUR PLAYBOOK" data-vi="CẨM NANG">YOUR PLAYBOOK</div>
+        <h2 class="a2 sh" style="text-align:center"
+          data-en="When to <span class='hl'>Vibe Code</span> vs <span class='hl'>Deep Think</span>"
+          data-vi="Khi Nào <span class='hl'>Vibe Code</span> Khi Nào <span class='hl'>Suy Nghĩ Sâu</span>">
+          When to <span class="hl">Vibe Code</span> vs <span class="hl">Deep Think</span>
+        </h2>
+        <div class="a3" style="width:100%;display:flex;justify-content:center">
+          <svg viewBox="0 0 700 290" xmlns="http://www.w3.org/2000/svg" style="max-width:700px;width:100%;height:auto">
+            <defs>
+              <filter id="gl3">
+                <feGaussianBlur stdDeviation="2" result="b" />
+                <feMerge>
+                  <feMergeNode in="b" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- Question -->
+            <rect x="150" y="10" width="400" height="50" rx="12" fill="rgba(247,201,72,.08)" stroke="#f7c948"
+              stroke-width="2" />
+            <text x="350" y="32" text-anchor="middle" fill="#f7c948" font-family="Be Vietnam Pro" font-weight="600"
+              font-size="11" data-en="🤔 Is this about WHAT to build or HOW to build it?"
+              data-vi="🤔 Đây là về XÂY CÁI GÌ hay XÂY NHƯ THẾ NÀO?">🤔 Is this about WHAT to build or HOW to build
+              it?</text>
+            <text x="350" y="48" text-anchor="middle" fill="#f7c948" font-family="Be Vietnam Pro" font-weight="600"
+              font-size="10" data-en="(strategy vs execution)" data-vi="(chiến lược vs thực thi)">(strategy vs
+              execution)</text>
+
+            <!-- Arrows -->
+            <line x1="225" y1="60" x2="150" y2="100" stroke="#fb7185" stroke-width="2" />
+            <text x="170" y="82" fill="#fb7185" font-family="Space Mono" font-size="9" font-weight="700" data-en="WHAT"
+              data-vi="CÁI GÌ">WHAT</text>
+            <line x1="350" y1="60" x2="350" y2="100" stroke="#f7c948" stroke-width="2" />
+            <text x="370" y="82" fill="#f7c948" font-family="Space Mono" font-size="9" font-weight="700" data-en="BOTH"
+              data-vi="CẢ HAI">BOTH</text>
+            <line x1="475" y1="60" x2="550" y2="100" stroke="#34d399" stroke-width="2" />
+            <text x="530" y="82" fill="#34d399" font-family="Space Mono" font-size="9" font-weight="700" data-en="HOW"
+              data-vi="THẾ NÀO">HOW</text>
+
+            <!-- Box: Deep Think -->
+            <rect x="30" y="100" width="240" height="75" rx="12" fill="rgba(251,113,133,.08)" stroke="#fb7185"
+              stroke-width="2" filter="url(#gl3)" />
+            <text x="150" y="124" text-anchor="middle" fill="#fb7185" font-family="Be Vietnam Pro" font-weight="800"
+              font-size="14">🧠</text>
+            <text x="150" y="142" text-anchor="middle" fill="#f1f5f9" font-family="Be Vietnam Pro" font-weight="700"
+              font-size="11" data-en="Deep Think — You Lead" data-vi="Suy Nghĩ Sâu — Bạn Dẫn">Deep Think — You
+              Lead</text>
+            <text x="150" y="160" text-anchor="middle" fill="#94a3b8" font-family="Space Mono" font-size="7"
+              data-en="Product strategy, user research, priorities"
+              data-vi="Chiến lược product, user research, ưu tiên">Product strategy, user research, priorities</text>
+
+            <!-- Box: Decompose -->
+            <rect x="290" y="100" width="120" height="75" rx="12" fill="rgba(247,201,72,.08)" stroke="#f7c948"
+              stroke-width="2" filter="url(#gl3)" />
+            <text x="350" y="124" text-anchor="middle" fill="#f7c948" font-family="Be Vietnam Pro" font-weight="800"
+              font-size="14">⚡</text>
+            <text x="350" y="142" text-anchor="middle" fill="#f1f5f9" font-family="Be Vietnam Pro" font-weight="700"
+              font-size="11" data-en="Decompose" data-vi="Tách Nhỏ">Decompose</text>
+            <text x="350" y="158" text-anchor="middle" fill="#94a3b8" font-family="Space Mono" font-size="7"
+              data-en="Split into parts" data-vi="Tách thành phần">Split into parts</text>
+
+            <!-- Box: Vibe Code / Agents -->
+            <rect x="430" y="100" width="240" height="75" rx="12" fill="rgba(52,211,153,.08)" stroke="#34d399"
+              stroke-width="2" filter="url(#gl3)" />
+            <text x="550" y="124" text-anchor="middle" fill="#34d399" font-family="Be Vietnam Pro" font-weight="800"
+              font-size="14">🤖</text>
+            <text x="550" y="142" text-anchor="middle" fill="#f1f5f9" font-family="Be Vietnam Pro" font-weight="700"
+              font-size="11" data-en="Vibe Code / Agents" data-vi="Vibe Code / Agents">Vibe Code / Agents</text>
+            <text x="550" y="160" text-anchor="middle" fill="#94a3b8" font-family="Space Mono" font-size="7"
+              data-en="Scaffold, boilerplate, explore, prototype"
+              data-vi="Scaffold, boilerplate, khám phá, prototype">Scaffold, boilerplate, explore, prototype</text>
+
+            <!-- Decompose arrows -->
+            <line x1="320" y1="175" x2="200" y2="210" stroke="#f7c948" stroke-width="1.5" stroke-dasharray="4 3" />
+            <line x1="380" y1="175" x2="500" y2="210" stroke="#f7c948" stroke-width="1.5" stroke-dasharray="4 3" />
+
+            <!-- Sub-boxes -->
+            <rect x="80" y="210" width="240" height="42" rx="8" fill="rgba(251,113,133,.05)" stroke="#fb7185"
+              stroke-width="1" />
+            <text x="200" y="230" text-anchor="middle" fill="#fb7185" font-family="Be Vietnam Pro" font-weight="600"
+              font-size="9" data-en="WHAT parts → You think deeply" data-vi="Phần CÁI GÌ → Bạn suy nghĩ sâu">WHAT parts
+              → You think deeply</text>
+            <text x="200" y="244" text-anchor="middle" fill="#64748b" font-family="Space Mono" font-size="7"
+              data-en="metrics, UX, architecture" data-vi="metrics, UX, kiến trúc">metrics, UX, architecture</text>
+
+            <rect x="380" y="210" width="240" height="42" rx="8" fill="rgba(52,211,153,.05)" stroke="#34d399"
+              stroke-width="1" />
+            <text x="500" y="230" text-anchor="middle" fill="#34d399" font-family="Be Vietnam Pro" font-weight="600"
+              font-size="9" data-en="HOW parts → Agents + Vibe Code" data-vi="Phần THẾ NÀO → Agents + Vibe Code">HOW
+              parts → Agents + Vibe Code</text>
+            <text x="500" y="244" text-anchor="middle" fill="#64748b" font-family="Space Mono" font-size="7"
+              data-en="scaffold, tests, mock data" data-vi="scaffold, tests, mock data">scaffold, tests, mock
+              data</text>
+
+            <!-- Annotation -->
+            <text x="350" y="280" text-anchor="middle" fill="#475569" font-family="Space Mono" font-size="8"
+              letter-spacing="1" data-en="↑ Most tasks have BOTH — decompose first, always"
+              data-vi="↑ Hầu hết task có CẢ HAI — luôn tách nhỏ trước">↑ Most tasks have BOTH — decompose first,
+              always</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
     <!-- ===== 11: CLOSING ===== -->
     <div class="s" data-slide="11">
       <div class="go gh" style="top:30%;left:-100px"></div>
@@ -1659,8 +1746,8 @@
     let notesVisible = false;
 
     const slideNames = {
-      en: ["Title", "The Challenge", "The Loop", "① PM Vibe Code", "② Engineer + Agents", "③ Discovery (Video)", "③ Discovery Done", "Results", "Intelligent AI Use", "Decision Framework", "DRAG: What to Outsource", "Your Move"],
-      vi: ["Trang Bìa", "Thách Thức", "Vòng Lặp", "① PM Vibe Code", "② Engineer + Agents", "③ Khám Phá (Video)", "③ Khám Phá Xong", "Kết Quả", "Dùng AI Thông Minh", "Cây Quyết Định", "DRAG: Outsource Gì", "Lượt Của Bạn"]
+      en: ["Title", "The Challenge", "The Loop", "① PM Vibe Code", "② Engineer + Agents", "③ Discovery (Video)", "③ Discovery Done", "Results", "DRAG: What to Outsource", "Intelligent AI Use", "Decision Framework", "Your Move"],
+      vi: ["Trang Bìa", "Thách Thức", "Vòng Lặp", "① PM Vibe Code", "② Engineer + Agents", "③ Khám Phá (Video)", "③ Khám Phá Xong", "Kết Quả", "DRAG: Outsource Gì", "Dùng AI Thông Minh", "Cây Quyết Định", "Lượt Của Bạn"]
     };
 
     function buildSlideNav() {
@@ -1684,10 +1771,11 @@
         "<strong>DEMO:</strong> If possible, do a LIVE vibe-coding session. Take a feature idea from the audience, spend 3 minutes with AI to build a rough prototype. 'This replaces a week of PRD writing.'",
         "<strong>KEY:</strong> Emphasize the orchestration analogy. 'The conductor doesn't play every instrument — they ensure the ensemble creates music, not noise.' Engineers set direction, agents execute.",
         "<strong>VIDEO:</strong> Play the demo video. Point out: the agent navigates REAL code, reads REAL data models. 'This is not a chatbot — this is a thinking partner that can read your codebase.'",
+        "<strong>RESULT:</strong> Show the output. 'This is what a full discovery pass looks like — structured recommendations ready for prioritization, without pulling engineers off delivery.'",
         "<strong>NUMBERS:</strong> Let the stats breathe. '5× faster to alignment — that means 5 ideas validated in the time it took to validate one.' Connect to business impact.",
+        "<strong>DRAG:</strong> 'For 200 people across functions, this is the cheat sheet. Left curve = let AI do it. Right curve = YOU invest deeply. DRAG = the 4 types of capped-payoff work. If your task is D, R, A, or G — hand it to the drunk genius. Everything else? You drive.'",
         "<strong>BRIDGE:</strong> 'Speed is the outcome. Intelligence is the method.' Connect each loop step to the principle: DRAG for mechanical work, human judgment for strategy, Fool mindset for discovery.",
         "<strong>PRACTICAL:</strong> Walk through a real example. 'Next sprint: before coding, ask — is this a WHAT decision or a HOW task?' Decompose on the whiteboard.",
-        "<strong>DRAG:</strong> 'For 200 people across functions, this is the cheat sheet. Left curve = let AI do it. Right curve = YOU invest deeply. DRAG = the 4 types of capped-payoff work. If your task is D, R, A, or G — hand it to the drunk genius. Everything else? You drive.'",
         "<strong>CLOSE:</strong> Read the quote slowly. Point to the Designer card: 'This loop isn't just PM and Eng — designers can jump in at any point. Critique the prototype, explore patterns, even vibe-code UX concepts.' End with: 'Who wants to try this on their next sprint?'"
       ],
       vi: [
@@ -1697,10 +1785,11 @@
         "<strong>DEMO:</strong> Nếu có thể, vibe-code LIVE. Lấy ý tưởng feature từ khán giả, 3 phút với AI tạo prototype thô. 'Thay thế 1 tuần viết PRD.'",
         "<strong>CHÌA KHÓA:</strong> Nhấn mạnh ví dụ nhạc trưởng. 'Nhạc trưởng không chơi mọi nhạc cụ — họ đảm bảo dàn nhạc tạo nhạc, không phải tiếng ồn.' Engineer định hướng, agents thực thi.",
         "<strong>VIDEO:</strong> Phát demo. Chỉ ra: agent duyệt code THẬT, đọc data model THẬT. 'Đây không phải chatbot — đây là bạn đồng hành tư duy đọc được codebase.'",
+        "<strong>KẾT QUẢ:</strong> Chỉ output. 'Đây là kết quả vòng discovery đầy đủ — đề xuất có cấu trúc sẵn sàng ưu tiên, không cần kéo engineer khỏi delivery.'",
         "<strong>SỐ LIỆU:</strong> Để stats thở. '5× nhanh hơn đến alignment — nghĩa là 5 ý tưởng validated trong thời gian trước đây validate 1.' Kết nối đến business impact.",
+        "<strong>DRAG:</strong> 'Cho 200 người đa chức năng, đây là bảng tham chiếu. Đường cong trái = để AI lo. Đường cong phải = BẠN đầu tư sâu. DRAG = 4 loại việc trả về giới hạn. Nếu task là D, R, A, hoặc G — giao cho thiên tài say. Mọi thứ khác? Bạn cầm lái.'",
         "<strong>CẦU NỐI:</strong> 'Tốc độ là kết quả. Thông minh là phương pháp.' Kết nối mỗi bước loop với nguyên tắc: DRAG cho việc cơ học, phán đoán người cho chiến lược, tư duy Fool cho khám phá.",
         "<strong>THỰC HÀNH:</strong> Đi qua ví dụ thật. 'Sprint tới: trước khi code, hỏi — đây là quyết định CÁI GÌ hay task THẾ NÀO?' Tách nhỏ trên whiteboard.",
-        "<strong>DRAG:</strong> 'Cho 200 người đa chức năng, đây là bảng tham chiếu. Đường cong trái = để AI lo. Đường cong phải = BẠN đầu tư sâu. DRAG = 4 loại việc trả về giới hạn. Nếu task là D, R, A, hoặc G — giao cho thiên tài say. Mọi thứ khác? Bạn cầm lái.'",
         "<strong>KẾT:</strong> Đọc quote chậm. Chỉ vào Designer card: 'Loop này không chỉ PM và Eng — designer có thể nhảy vào ở bất kỳ điểm nào. Critique prototype, khám phá patterns, thậm chí vibe-code UX concepts.' Kết: 'Ai muốn thử sprint tới?'"
       ]
     };
