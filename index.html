@@ -880,118 +880,78 @@
             April
             2026</span>
         </div>
-        <div class="a5"><span style="font-size:11px;color:var(--t3);font-family:var(--fm)"
+        <!-- <div class="a5"><span style="font-size:11px;color:var(--t3);font-family:var(--fm)"
             data-en="← → arrows  •  dots on right  •  N = speaker notes"
             data-vi="Phím ← →  •  chấm bên phải  •  N = ghi chú">← → arrows • dots on right • N = speaker notes</span>
-        </div>
+        </div> -->
       </div>
     </div>
 
-    <!-- ===== 02: THE PROBLEM — BEFORE AI ===== -->
+    <!-- ===== 02: THE CHALLENGE — DASHBOARD BUILDER CONTEXT ===== -->
     <div class="s" data-slide="1">
       <div class="go gp" style="top:50%;right:-200px"></div>
       <div class="si">
         <div class="a1 st" data-en="THE CHALLENGE" data-vi="THÁCH THỨC">THE CHALLENGE</div>
-        <h2 class="a2 sh" data-en="Discovery & Delivery Were <span class='hl'>Two Separate Worlds</span>"
-          data-vi="Khám Phá & Chuyển Giao Từng Là <span class='hl'>Hai Thế Giới Riêng</span>">
-          Discovery & Delivery Were <span class="hl">Two Separate Worlds</span>
+        <h2 class="a2 sh" data-en="Discovery & Delivery Before <span class='hl'>Opus 4.6</span> (Feb 2026)"
+          data-vi="Discovery & Delivery Trước <span class='hl'>Opus 4.6</span> (Tháng 2/2026)">
+          Discovery & Delivery Before <span class="hl">Opus 4.6</span> (Feb 2026)
         </h2>
-        <div class="a3 sg">
-          <div class="sc2">
-            <div class="sn2stat">10–12w</div>
-            <div class="sl" data-en="Typical feature delivery cycle" data-vi="Chu kỳ delivery trung bình">Typical
-              feature delivery cycle</div>
-          </div>
-          <div class="sc2">
-            <div class="sn2stat">3–4w</div>
-            <div class="sl" data-en="Just to align concept with stakeholders"
-              data-vi="Chỉ để align concept với stakeholder">Just to align concept with stakeholders</div>
-          </div>
-          <div class="sc2">
-            <div class="sn2stat">1 way</div>
-            <div class="sl" data-en="Discovery → Delivery, rarely loops back"
-              data-vi="Discovery → Delivery, hiếm khi lặp lại">Discovery → Delivery, rarely loops back</div>
-          </div>
-        </div>
+        <!-- Context: Analytics team & Dashboard Builder -->
+        <p class="a3 sb" style="max-width:760px"
+          data-en="Analytics team was born to solve VNGG's data visualization challenges — an internal tool with ~500 users. Goal: make dashboard creation fast & self-service. But until Q4 2025, creating dashboards remained manual due to permissions, performance, and data constraints."
+          data-vi="Team Analytics ra đời để giải quyết thách thức hiển thị dữ liệu của VNGG — tool nội bộ với ~500 user. Mục tiêu: tạo dashboard nhanh & tự phục vụ. Nhưng đến Q4 2025, việc tạo dashboard vẫn còn thủ công do phân quyền, performance và data.">
+          Analytics team was born to solve VNGG's data visualization challenges — an internal tool with ~500 users. Goal: make dashboard creation fast & self-service. But until Q4 2025, creating dashboards remained manual due to permissions, performance, and data constraints.
+        </p>
         <div class="a4 vf-wrap">
-          <!-- BEFORE -->
+          <!-- OLD PROCESS -->
           <div class="vf-col bf">
-            <div class="vf-hdr" style="color:var(--rose)" data-en="❌ BEFORE — THE SLOW HANDOFF CHAIN" data-vi="❌ TRƯỚC — CHUỖI TRAO TAY CHẬM CHẠP">❌ BEFORE — THE SLOW HANDOFF CHAIN</div>
+            <div class="vf-hdr" style="color:var(--rose)" data-en="❌ OLD PROCESS — MANUAL DASHBOARD CREATION" data-vi="❌ QUY TRÌNH CŨ — TẠO DASHBOARD THỦ CÔNG">❌ OLD PROCESS — MANUAL DASHBOARD CREATION</div>
             <div class="vf-list rl">
               <div class="vf-item">
-                <span class="vf-name" data-en="PM discovers idea" data-vi="PM phát hiện ý tưởng">PM discovers idea</span>
+                <span class="vf-name" data-en="Business user requests dashboard" data-vi="Business user yêu cầu dashboard">Business user requests dashboard</span>
               </div>
               <div class="vf-item pain">
-                <span class="vf-name" data-en="Writes spec" data-vi="Viết spec">Writes spec</span>
-                <span class="vf-badge wait">~1 WEEK</span>
-                <span class="vf-badge saved">⚡ CAN SAVE</span>
+                <span class="vf-name" data-en="DA validates data & writes SQL" data-vi="DA thẩm định data & viết SQL">DA validates data & writes SQL</span>
+                <span class="vf-badge wait">DAYS–WEEKS</span>
               </div>
               <div class="vf-item pain">
-                <span class="vf-name" data-en="Aligns with UX design" data-vi="Align với UX design">Aligns with UX design</span>
-                <span class="vf-badge wait">~1 WEEK</span>
-                <span class="vf-badge saved">⚡ CAN SAVE</span>
-              </div>
-              <div class="vf-item pain">
-                <span class="vf-name" data-en="Waits for engineering" data-vi="Chờ engineering">Waits for engineering</span>
-                <span class="vf-badge wait">DAYS BLOCKED</span>
-                <span class="vf-badge saved">⚡ CAN SAVE</span>
-              </div>
-              <div class="vf-item">
-                <span class="vf-name" data-en="Engineering builds" data-vi="Engineering build">Engineering builds</span>
+                <span class="vf-name" data-en="Analytics builds & displays on tool" data-vi="Analytics xây & hiển thị lên tool">Analytics builds & displays on tool</span>
                 <span class="vf-badge wait">WEEKS</span>
               </div>
               <div class="vf-item cut">
-                <span class="vf-name strike" data-en="Discovers spec was wrong" data-vi="Phát hiện spec sai">Discovers spec was wrong</span>
-                <span class="vf-badge rework">REWORK</span>
-              </div>
-              <div class="vf-item cut">
-                <span class="vf-name strike" data-en="Back to design" data-vi="Quay lại design">Back to design</span>
-                <span class="vf-badge rework">REWORK</span>
-              </div>
-              <div class="vf-item cut">
-                <span class="vf-name strike" data-en="Rewrites" data-vi="Viết lại">Rewrites</span>
-                <span class="vf-badge rework">REWORK</span>
-              </div>
-              <div class="vf-item cut">
-                <span class="vf-name strike" data-en="Repeat…" data-vi="Lặp lại…">Repeat…</span>
-                <span class="vf-badge rework">ENDLESS LOOP</span>
+                <span class="vf-name" data-en="Complex dashboards: filters in filters, global/local, multiple chart types" data-vi="Dashboard phức tạp: filter trong filter, global/local, nhiều chart type">Complex dashboards: filters in filters, global/local, multiple chart types</span>
+                <span class="vf-badge rework">WEEKS–MONTHS</span>
               </div>
             </div>
-            <div class="vf-summary" style="background:rgba(251,113,133,.06);color:var(--rose)" data-en="TOTAL: 10–12 WEEKS · EACH HANDOFF = DAYS" data-vi="TỔNG: 10–12 TUẦN · MỖI LẦN TRAO TAY = NGÀY">TOTAL: 10–12 WEEKS · EACH HANDOFF = DAYS</div>
+            <div class="vf-summary" style="background:rgba(251,113,133,.06);color:var(--rose)" data-en="RESULT: WEEKS TO MONTHS PER COMPLEX DASHBOARD" data-vi="KẾT QUẢ: TUẦN ĐẾN THÁNG CHO MỖI DASHBOARD PHỨC TẠP">RESULT: WEEKS TO MONTHS PER COMPLEX DASHBOARD</div>
           </div>
-          <!-- AFTER -->
+          <!-- THE MANDATE -->
           <div class="vf-col af">
-            <div class="vf-hdr" style="color:var(--green)" data-en="✅ AFTER — THE VISION" data-vi="✅ SAU — TẦM NHÌN">✅ AFTER — THE VISION</div>
+            <div class="vf-hdr" style="color:var(--warm)" data-en="⚡ Q1 2026 MANDATE" data-vi="⚡ CHỈ THỊ Q1 2026">⚡ Q1 2026 MANDATE</div>
             <div class="vf-list gl">
-              <div class="vf-item win">
-                <span class="vf-name" data-en="PM vibe-codes concept" data-vi="PM vibe-code concept">PM vibe-codes concept</span>
-                <span class="vf-badge fast">⚡ HOURS</span>
+              <div class="vf-item">
+                <span class="vf-name" data-en="Release Dashboard Builder in Q2" data-vi="Release Dashboard Builder trong Q2">Release Dashboard Builder in Q2</span>
+                <span class="vf-badge fast">🎯 GOAL</span>
               </div>
-              <div class="vf-item win">
-                <span class="vf-name" data-en="Designer reviews & refines real-time" data-vi="Designer review & tinh chỉnh real-time">Designer reviews & refines real-time</span>
-                <span class="vf-badge fast">⚡ SAME DAY</span>
+              <div class="vf-item">
+                <span class="vf-name" data-en="Self-service: users config their own dashboards" data-vi="Tự phục vụ: user tự config dashboard">Self-service: users config their own dashboards</span>
               </div>
-              <div class="vf-item win">
-                <span class="vf-name" data-en="Stakeholders align" data-vi="Stakeholder align">Stakeholders align</span>
-                <span class="vf-badge fast">⚡ HOURS</span>
+              <div class="vf-item">
+                <span class="vf-name" data-en="Original estimate: basic scope by 30/4" data-vi="Ước tính ban đầu: scope cơ bản trước 30/4">Original estimate: basic scope by 30/4</span>
+                <span class="vf-badge wait">~2 MONTHS</span>
               </div>
-              <div class="vf-item win">
-                <span class="vf-name" data-en="Engineers ship with agents" data-vi="Engineer ship bằng agents">Engineers ship with agents</span>
-                <span class="vf-badge fast">⚡ DAYS</span>
-              </div>
-              <div class="vf-item win">
-                <span class="vf-name" data-en="PM discovers what's next" data-vi="PM khám phá tiếp">PM discovers what's next</span>
-                <span class="vf-badge fast">🔄 CONTINUOUS</span>
+              <div class="vf-item">
+                <span class="vf-name" data-en="Chatbot & NL interaction: even longer" data-vi="Chatbot & tương tác ngôn ngữ tự nhiên: còn lâu hơn">Chatbot & NL interaction: even longer</span>
+                <span class="vf-badge wait">TBD</span>
               </div>
             </div>
-            <div class="vf-summary" style="background:rgba(52,211,153,.06);color:var(--green)" data-en="TOTAL: 1–2 WEEKS · CONTINUOUS LOOP" data-vi="TỔNG: 1–2 TUẦN · VÒNG LẶP LIÊN TỤC">TOTAL: 1–2 WEEKS · CONTINUOUS LOOP</div>
-            <div class="vf-elim" data-en="🚫 REWORK LOOP ELIMINATED — PROTOTYPE CATCHES ISSUES EARLY" data-vi="🚫 VÒNG LẶP SỬA LỖI LOẠI BỎ — PROTOTYPE PHÁT HIỆN VẤN ĐỀ SỚM">🚫 REWORK LOOP ELIMINATED — PROTOTYPE CATCHES ISSUES EARLY</div>
+            <div class="vf-summary" style="background:rgba(247,201,72,.06);color:var(--warm)" data-en="QUESTION: CAN AI AGENTS ACTUALLY HELP?" data-vi="CÂU HỎI: AI AGENTS CÓ THỰC SỰ GIÚP ĐƯỢC KHÔNG?">QUESTION: CAN AI AGENTS ACTUALLY HELP?</div>
           </div>
         </div>
         <div class="a5 qb"><span
-            data-en="The bottleneck was never talent — it was the gap between 'I have an idea' and 'I can show you what I mean.'"
-            data-vi="Nút thắt không bao giờ là năng lực — mà là khoảng cách giữa 'tôi có ý tưởng' và 'để tôi cho bạn xem.'">
-            The bottleneck was never talent — it was the gap between "I have an idea" and "I can show you what I mean."
+            data-en="Then Anthropic released Opus 4.6 in Feb 2026 — and AI agents changed how software gets defined and delivered. We had many questions: can AI really help in such a short timeframe?"
+            data-vi="Rồi Anthropic ra mắt Opus 4.6 vào tháng 2/2026 — và AI agents thay đổi cách software được define và delivered. Chúng tôi có nhiều câu hỏi: AI có thực sự giúp được trong thời gian ngắn như vậy?">
+            Then Anthropic released Opus 4.6 in Feb 2026 — and AI agents changed how software gets defined and delivered. We had many questions: can AI really help in such a short timeframe?
           </span></div>
       </div>
     </div>
@@ -1063,11 +1023,11 @@
           <div class="c" style="border-left:3px solid var(--hot)">
             <div class="ct" data-en="Your Vibe-Coding Recipe" data-vi="Công Thức Vibe-Coding">🧪 Your Vibe-Coding Recipe</div>
             <div class="cd"
-              data-en="① Start with the user story — not a feature list<br>② Describe the outcome: 'A page where managers see team velocity and drill into sprints'<br>③ Iterate visually: 'Make the chart more prominent' beats 'Change the CSS'<br>④ Your prototype IS the spec — show it, don't document it"
-              data-vi="① Bắt đầu từ user story — không phải danh sách feature<br>② Mô tả kết quả: 'Trang nơi manager thấy velocity và drill vào sprint'<br>③ Iterate trực quan: 'Làm chart nổi bật hơn' tốt hơn 'Sửa CSS'<br>④ Prototype của bạn LÀ spec — show, đừng viết docs">
+              data-en="① Start with the user story — not a feature list<br>② Describe the outcome: 'I want a dashboard builder using e-charts for display, connected to MCP, with drag-and-drop charts and configurable features abc'<br>③ Iterate with natural language to add more features<br>④ Your prototype IS the spec — show it, don't document it"
+              data-vi="① Bắt đầu từ user story — không phải danh sách feature<br>② Mô tả kết quả: 'Tôi muốn một dashboard builder sử dụng e-charts để display, kết nối được vào MCP, charts có thể kéo thả, config được những tính năng abc'<br>③ Iterate bằng ngôn ngữ tự nhiên để add thêm feature<br>④ Prototype của bạn LÀ spec — show, đừng viết docs">
               ① Start with the user story — not a feature list<br>
-              ② Describe the outcome: "A page where managers see team velocity and drill into sprints"<br>
-              ③ Iterate visually: "Make the chart more prominent" beats "Change the CSS"<br>
+              ② Describe the outcome: "I want a dashboard builder using e-charts for display, connected to MCP, with drag-and-drop charts and configurable features abc"<br>
+              ③ Iterate with natural language to add more features<br>
               ④ Your prototype IS the spec — show it, don't document it
             </div>
           </div>
@@ -1123,7 +1083,7 @@
           <div
             style="flex:1;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.2);border-radius:14px;padding:18px">
             <div style="font-family:var(--fm);font-size:9px;letter-spacing:2px;color:var(--green);margin-bottom:8px"
-              data-en="🟢 AGENTS HANDLE (ZONE 1)" data-vi="🟢 AGENTS LÀM (VÙNG 1)">🟢 AGENTS HANDLE (ZONE 1)</div>
+              data-en="🟢 AGENTS HANDLE" data-vi="🟢 AGENTS LÀM">🟢 AGENTS HANDLE</div>
             <div class="timeline">
               <div class="tl-item">
                 <div class="tl-dot" style="border-color:var(--green)"></div>
@@ -1153,7 +1113,7 @@
           <div
             style="flex:1;background:rgba(251,113,133,.05);border:1px solid rgba(251,113,133,.2);border-radius:14px;padding:18px">
             <div style="font-family:var(--fm);font-size:9px;letter-spacing:2px;color:var(--rose);margin-bottom:8px"
-              data-en="🔴 ENGINEERS OWN (ZONE 2)" data-vi="🔴 ENGINEER LÀM (VÙNG 2)">🔴 ENGINEERS OWN (ZONE 2)</div>
+              data-en="🔴 ENGINEERS OWN" data-vi="🔴 ENGINEER LÀM">🔴 ENGINEERS OWN</div>
             <div class="timeline">
               <div class="tl-item">
                 <div class="tl-dot" style="border-color:var(--rose)"></div>
@@ -1317,25 +1277,32 @@
             </div>
           </div>
         </div>
-        <div class="a4 cg cg2">
-          <div class="c" style="border-left:3px solid var(--green)">
-            <div class="ci">📊</div>
-            <div class="ct" data-en="Discovery Speed" data-vi="Tốc Độ Khám Phá">Discovery Speed</div>
+        <div class="a4 cg cg3">
+          <div class="c" style="border-left:3px solid var(--rose)">
+            <div class="ci">❌</div>
+            <div class="ct" data-en="Before: Manual Dashboard Creation" data-vi="Trước: Tạo Dashboard Thủ Công">Before: Manual Dashboard Creation</div>
             <div class="cd"
-              data-en="PM can explore codebase patterns and surface feature ideas without waiting for engineer availability. Discovery happens in parallel with delivery."
-              data-vi="PM có thể khám phá patterns codebase và tìm ý tưởng feature mà không cần chờ engineer. Discovery diễn ra song song với delivery.">
-              PM can explore codebase patterns and surface feature ideas without waiting for engineer availability.
-              Discovery happens in parallel with delivery.
+              data-en="Business user → DA validates & writes SQL → Analytics builds → weeks to months per complex dashboard. External tools couldn't meet all needs. Estimated ~2 months for basic Dashboard Builder scope."
+              data-vi="Business user → DA thẩm định & viết SQL → Analytics xây → tuần đến tháng cho mỗi dashboard phức tạp. Tool external không đáp ứng hết. Ước tính ~2 tháng cho scope cơ bản Dashboard Builder.">
+              Business user → DA validates & writes SQL → Analytics builds → weeks to months per complex dashboard. External tools couldn't meet all needs. Estimated ~2 months for basic Dashboard Builder scope.
+            </div>
+          </div>
+          <div class="c" style="border-left:3px solid var(--green)">
+            <div class="ci">✅</div>
+            <div class="ct" data-en="After: AI-Powered Continuous Loop" data-vi="Sau: Vòng Lặp Liên Tục Với AI">After: AI-Powered Continuous Loop</div>
+            <div class="cd"
+              data-en="PM vibe-codes prototype in hours → Engineer orchestrates agents → ships in days → PM discovers next features from codebase. Stakeholders align on interactive demos, not docs. Discovery happens in parallel with delivery."
+              data-vi="PM vibe-code prototype trong giờ → Engineer orchestrate agents → ship trong ngày → PM discover feature tiếp từ codebase. Stakeholder align trên demo tương tác, không phải docs. Discovery diễn ra song song với delivery.">
+              PM vibe-codes prototype in hours → Engineer orchestrates agents → ships in days → PM discovers next features from codebase. Stakeholders align on interactive demos, not docs. Discovery happens in parallel with delivery.
             </div>
           </div>
           <div class="c" style="border-left:3px solid var(--cool)">
             <div class="ci">🔄</div>
-            <div class="ct" data-en="Feedback Loops" data-vi="Vòng Feedback">Feedback Loops</div>
+            <div class="ct" data-en="Compounding Loop" data-vi="Vòng Lặp Cộng Dồn">Compounding Loop</div>
             <div class="cd"
-              data-en="Stakeholder alignment moved from document review to interactive prototype review. Misunderstandings caught in hours, not weeks."
-              data-vi="Alignment stakeholder chuyển từ review tài liệu sang review prototype tương tác. Hiểu lầm được phát hiện trong giờ, không phải tuần.">
-              Stakeholder alignment moved from document review to interactive prototype review. Misunderstandings caught
-              in hours, not weeks.
+              data-en="These numbers aren't the destination — they're the first lap. Each iteration compounds: faster discovery → better concepts → tighter delivery → more time to discover."
+              data-vi="Những con số này không phải điểm đến — đây là vòng đầu tiên. Mỗi iteration cộng dồn: discovery nhanh hơn → concept tốt hơn → delivery tight hơn → thêm thời gian discover.">
+              These numbers aren't the destination — they're the first lap. Each iteration compounds: faster discovery → better concepts → tighter delivery → more time to discover.
             </div>
           </div>
         </div>
@@ -1729,9 +1696,9 @@
           </div>
         </div>
         <div class="a5 qb" style="max-width:600px"><span
-            data-en="2 months ago we asked: can AI speed up how we build? Now we know: it doesn't just speed up delivery — it transforms how we discover what to build."
-            data-vi="2 tháng trước chúng tôi hỏi: AI có thể tăng tốc cách build? Giờ chúng tôi biết: nó không chỉ tăng tốc delivery — nó thay đổi cách khám phá cần build gì.">
-            2 months ago we asked: can AI speed up how we build? Now we know: it doesn't just speed up delivery — it
+            data-en="On March 6 2026, we asked: can AI speed up how we build? Now we know: it doesn't just speed up delivery — it transforms how we discover what to build."
+            data-vi="Mới 6 tháng 3 2026, chúng tôi còn hỏi: AI có thể tăng tốc cách build? Giờ chúng tôi biết: nó không chỉ tăng tốc delivery — nó thay đổi cách khám phá cần build gì.">
+            On March 6 2026 we asked: can AI speed up how we build? Now we know: it doesn't just speed up delivery — it
             transforms how we discover what to build.
           </span></div>
       </div>
@@ -1765,32 +1732,32 @@
 
     const speakerNotes = {
       en: [
-        "<strong>OPEN:</strong> 'Two months ago we started an experiment. What if AI could close the gap between having an idea and proving it works?' This deck shows what happened.",
-        "<strong>PAIN:</strong> Pause on the 10–12 week stat. 'That's not engineering time — that's WAITING time. PM discovers → writes spec → aligns with design → waits for eng. Three handoffs before a single line of code.' Show the before/after contrast.",
-        "<strong>FRAMEWORK:</strong> Point to the loop visual. 'This is NOT a pipeline — it's a flywheel. Each turn makes the next turn faster.' Explain how PM concept feeds into engineering, which feeds back into discovery.",
-        "<strong>DEMO:</strong> If possible, do a LIVE vibe-coding session. Take a feature idea from the audience, spend 3 minutes with AI to build a rough prototype. 'This replaces a week of PRD writing.'",
-        "<strong>KEY:</strong> Emphasize the orchestration analogy. 'The conductor doesn't play every instrument — they ensure the ensemble creates music, not noise.' Engineers set direction, agents execute.",
-        "<strong>VIDEO:</strong> Play the demo video. Point out: the agent navigates REAL code, reads REAL data models. 'This is not a chatbot — this is a thinking partner that can read your codebase.'",
-        "<strong>RESULT:</strong> Show the output. 'This is what a full discovery pass looks like — structured recommendations ready for prioritization, without pulling engineers off delivery.'",
-        "<strong>NUMBERS:</strong> Let the stats breathe. '5× faster to alignment — that means 5 ideas validated in the time it took to validate one.' Connect to business impact.",
-        "<strong>DRAG:</strong> 'For 200 people across functions, this is the cheat sheet. Left curve = let AI do it. Right curve = YOU invest deeply. DRAG = the 4 types of capped-payoff work. If your task is D, R, A, or G — hand it to the drunk genius. Everything else? You drive.'",
-        "<strong>BRIDGE:</strong> 'Speed is the outcome. Intelligence is the method.' Connect each loop step to the principle: DRAG for mechanical work, human judgment for strategy, Fool mindset for discovery.",
-        "<strong>PRACTICAL:</strong> Walk through a real example. 'Next sprint: before coding, ask — is this a WHAT decision or a HOW task?' Decompose on the whiteboard.",
-        "<strong>CLOSE:</strong> Read the quote slowly. Point to the Designer card: 'This loop isn't just PM and Eng — designers can jump in at any point. Critique the prototype, explore patterns, even vibe-code UX concepts.' End with: 'Who wants to try this on their next sprint?'"
+        "<strong>OPEN (~3 min):</strong> 'Hello everyone! Today the Analytics team will share our 4-week journey applying AI to our product development workflow. We hope to bring you a real use case and useful insights about current AI agent capabilities — not just for building prototypes but also for delivering software.'",
+        "<strong>CHALLENGE (~1.5 min):</strong> Exactly one month ago on 6/3, meeting room 2332, final Q1 meeting of AAA initiatives — leadership mandated: release a solid Dashboard Builder in Q2. Analytics team exists to solve VNGG's data visualization — ~500 users, goal is fast self-service dashboards. Until Q4 2025, dashboard creation was manual (permissions, performance, data). External tools like Tableau/PowerBI couldn't meet all needs. Complex dashboards took weeks to months. Then Opus 4.6 arrived Feb 2026 — can AI really help in such a short timeframe? Original estimate: basic scope by 30/4. Chatbot/NL interaction: even longer. This presentation walks you through 1 month of results applying AI: from prototype, to engineer-managed agents speeding up coding, to continuous discovery of next features.",
+        "<strong>FRAMEWORK (~1.5 min):</strong> After 4 weeks applying AI to our workflow, the key lesson: at least three steps where AI makes a real difference. Step 1: PM creates high-fidelity prototype from just an idea — ready for stakeholder experience & feedback. Step 2: Engineer + Agents — from high-fidelity prototype (instead of PRD), engineer orchestrates agents like a conductor. AI handles boilerplate/scaffold, engineer owns architecture/quality. Step 3: PM uses agents to explore real codebase — discover next features, prioritize backlog, vibe-code next concept. Loop restarts. Think of it as a relay race — AI is the track that makes every handoff faster.",
+        "<strong>PM VIBE CODE (~1.5 min):</strong> Step one: PM creates interactive, high-fidelity prototype. Start from user story — describe outcome, not feature list. Like 'I want a dashboard builder using e-charts, connecting to MCP, with configurable features.' Iterate with natural language. What you create — interactive prototype with real mock data — IS the spec. Stakeholders don't read docs. They USE prototypes. Vibe coding closes the imagination gap. [Show video demo: Dashboard Builder vibe code concept with better UI/UX and MCP connection using real data.]",
+        "<strong>ENGINEER + AGENTS (~1.5 min):</strong> Step two: Engineer + Agents. Two clear zones: Zone 1 — Agents handle: scaffold, boilerplate, component structure, unit tests, migrations. Zone 2 — Engineers own: system architecture, performance trade-offs, code review, final judgment. AI doesn't replace engineers. Engineers become orchestrators — human judgment for critical decisions, AI handles mechanical work. Result: 10–12 weeks down to 2 weeks.",
+        "<strong>DISCOVERY VIDEO (~3-4 min):</strong> Before the next slide — demo the Dashboard Builder product after applying AI. [Play demo video. Point out: agents navigate REAL code, read REAL data models. This is not a chatbot — this is a thinking partner that can read your codebase.]",
+        "<strong>DISCOVERY DONE:</strong> Continue the loop — from explore codebase, surface patterns, discover next, prioritize, then vibe-code next concept. Discovery is now continuous, not quarterly. Example: from codebase, discover next-step features, then use AI to quickly turn them into prototypes to validate and continue the Discovery loop.",
+        "<strong>RESULTS (~1 min):</strong> After 2 months, real numbers: 5× faster concept-to-alignment — weeks to days. ~80% delivery time reduced — 10–12 weeks to 2 weeks. Discovery loop: quarterly → continuous. But more importantly: these numbers aren't the destination. This is the first lap. Each loop iteration compounds — faster discovery → better concepts → tighter delivery → more time to discover.",
+        "<strong>DRAG (~1.5 min):</strong> A framework for deciding what to hand to AI: DRAG — Drafting, Research, Analysis, Grunt Work. Two zones: Capped payoff — no matter how much effort, returns plateau. Let AI handle these. Uncapped payoff — product strategy, architecture, UX decisions — you must own these. AI is like a drunk genius — brilliant but unreliable. Let AI ride shotgun. You still drive.",
+        "<strong>INTELLIGENT USE:</strong> Speed is the outcome. Intelligence is the method. Connect each loop step to the principle: DRAG for mechanical work, human judgment for strategy, Fool mindset for discovery.",
+        "<strong>DECISION FRAMEWORK:</strong> Next sprint: before coding, ask — is this a WHAT decision or a HOW task? Decompose first, always.",
+        "<strong>CLOSE (~1 min):</strong> Takeaway for each role: PMs — vibe-code your next concept, show don't tell. Designers — jump into the loop at any point, critique prototypes, explore UX patterns with agents. Engineers — decompose next ticket, DRAG Zone 1 parts, keep architecture decisions yours. Everyone — ask the 'naive' questions, explore before you build. 2 months ago we asked: can AI help us build faster? Now we know: it doesn't just speed up delivery — it transforms how we discover what to build. Thank you! Ready for questions."
       ],
       vi: [
-        "<strong>MỞ:</strong> '2 tháng trước chúng tôi bắt đầu thử nghiệm. Nếu AI có thể rút ngắn khoảng cách giữa ý tưởng và chứng minh nó hoạt động thì sao?' Deck này cho thấy kết quả.",
-        "<strong>ĐAU:</strong> Dừng ở 10–12 tuần. 'Đó không phải thời gian engineering — đó là thời gian CHỜ. PM phát hiện ý tưởng → viết spec → align với design → chờ eng. Ba lần trao tay trước khi viết 1 dòng code.' Chỉ ra before/after.",
-        "<strong>FRAMEWORK:</strong> Chỉ vào loop. 'Đây KHÔNG phải pipeline — đây là flywheel. Mỗi vòng quay làm vòng sau nhanh hơn.' Giải thích PM concept → engineering → discovery.",
-        "<strong>DEMO:</strong> Nếu có thể, vibe-code LIVE. Lấy ý tưởng feature từ khán giả, 3 phút với AI tạo prototype thô. 'Thay thế 1 tuần viết PRD.'",
-        "<strong>CHÌA KHÓA:</strong> Nhấn mạnh ví dụ nhạc trưởng. 'Nhạc trưởng không chơi mọi nhạc cụ — họ đảm bảo dàn nhạc tạo nhạc, không phải tiếng ồn.' Engineer định hướng, agents thực thi.",
-        "<strong>VIDEO:</strong> Phát demo. Chỉ ra: agent duyệt code THẬT, đọc data model THẬT. 'Đây không phải chatbot — đây là bạn đồng hành tư duy đọc được codebase.'",
-        "<strong>KẾT QUẢ:</strong> Chỉ output. 'Đây là kết quả vòng discovery đầy đủ — đề xuất có cấu trúc sẵn sàng ưu tiên, không cần kéo engineer khỏi delivery.'",
-        "<strong>SỐ LIỆU:</strong> Để stats thở. '5× nhanh hơn đến alignment — nghĩa là 5 ý tưởng validated trong thời gian trước đây validate 1.' Kết nối đến business impact.",
-        "<strong>DRAG:</strong> 'Cho 200 người đa chức năng, đây là bảng tham chiếu. Đường cong trái = để AI lo. Đường cong phải = BẠN đầu tư sâu. DRAG = 4 loại việc trả về giới hạn. Nếu task là D, R, A, hoặc G — giao cho thiên tài say. Mọi thứ khác? Bạn cầm lái.'",
-        "<strong>CẦU NỐI:</strong> 'Tốc độ là kết quả. Thông minh là phương pháp.' Kết nối mỗi bước loop với nguyên tắc: DRAG cho việc cơ học, phán đoán người cho chiến lược, tư duy Fool cho khám phá.",
-        "<strong>THỰC HÀNH:</strong> Đi qua ví dụ thật. 'Sprint tới: trước khi code, hỏi — đây là quyết định CÁI GÌ hay task THẾ NÀO?' Tách nhỏ trên whiteboard.",
-        "<strong>KẾT:</strong> Đọc quote chậm. Chỉ vào Designer card: 'Loop này không chỉ PM và Eng — designer có thể nhảy vào ở bất kỳ điểm nào. Critique prototype, khám phá patterns, thậm chí vibe-code UX concepts.' Kết: 'Ai muốn thử sprint tới?'"
+        "<strong>MỞ ĐẦU (~3 phút):</strong> 'Xin chào mọi người! Hôm nay Analytics team sẽ chia sẻ về hành trình 4 tuần ứng dụng AI vào luồng phát triển sản phẩm của team. Hy vọng sẽ mang lại cho mọi người một usecase thực tế và những insights bổ ích về khả năng của AI agents hiện tại — không chỉ build prototype mà cả delivery software.'",
+        "<strong>THÁCH THỨC (~1.5 phút):</strong> Vào đúng ngày này 1 tháng trước 6/3, phòng họp 2332, cuộc họp cuối Q1 của AAA initiatives — ban lãnh đạo chỉ thị: release Dashboard Builder ngon nghẻ trong Q2. Team Analytics sinh ra để giải quyết vấn đề hiển thị dữ liệu VNGG — ~500 user, mục tiêu tạo/sử dụng dashboard hiệu quả nhất. Đến Q4 2025, quy trình vẫn thủ công (phân quyền, performance, data). Tool external như Tableau/PowerBI không đáp ứng hết. Dashboard phức tạp mất tuần đến tháng. Rồi Opus 4.6 ra mắt tháng 2/2026 — AI agents có thực sự giúp được? Estimate ban đầu: scope cơ bản trước 30/4. Chatbot/NL interaction: còn lâu hơn. Bài presentation đưa mọi người đi qua kết quả 1 tháng ứng dụng AI: từ prototype, engineer quản lý agents speed up coding, đến continuous discovery feature tiếp theo.",
+        "<strong>FRAMEWORK (~1.5 phút):</strong> Đi qua 4 tuần ứng dụng AI, bài học rút ra: ít nhất 3 bước AI tạo sự khác biệt. Bước 1: PM tạo prototype high-fidelity từ 1 ý tưởng — ready cho stakeholder trải nghiệm & feedback. Bước 2: Engineer + Agents — từ prototype high-fidelity (thay vì PRD), engineer orchestrate agents như nhạc trưởng. AI xử lý boilerplate/scaffold, engineer lo architecture/quality. Bước 3: PM dùng agents explore codebase thật — discover feature tiếp, prioritize backlog, vibe-code concept tiếp. Loop bắt đầu lại. Nghĩ như relay race — AI là track làm mỗi handoff nhanh hơn.",
+        "<strong>PM VIBE CODE (~1.5 phút):</strong> Bước đầu tiên: PM tạo interactive, high-fidelity prototype. Bắt đầu từ user story — mô tả outcome, không phải feature list. Kiểu 'tôi muốn trang dashboard builder dùng e-charts, kết nối MCP, config tính năng abc'. Iterate bằng ngôn ngữ tự nhiên. Thứ bạn tạo ra — interactive prototype với mock data thật — đó chính là spec. Stakeholders không đọc tài liệu. Họ dùng prototype. Vibe coding đóng khoảng cách trí tưởng tượng. [Show video demo: Dashboard Builder vibe code concept với UI/UX tốt hơn và MCP connection dùng data thật.]",
+        "<strong>ENGINEER + AGENTS (~1.5 phút):</strong> Bước hai: Engineer + Agents. Chia rõ hai zone: Zone 1 — Agents lo: scaffold, boilerplate, component structure, unit tests, migrations. Zone 2 — Engineer lo: system architecture, performance trade-offs, code review, final judgment. Không phải AI replace engineer. Engineer trở thành orchestrator — human judgment cho decisions quan trọng, AI xử lý phần mechanical. Kết quả: 10–12 tuần xuống còn 2 tuần.",
+        "<strong>DEMO SẢN PHẨM (~3-4 phút):</strong> Trước khi vào slide tiếp — demo sản phẩm Dashboard Builder sau khi ứng dụng AI. [Phát demo video. Chỉ ra: agent duyệt code THẬT, đọc data model THẬT. Đây không phải chatbot — đây là bạn đồng hành tư duy đọc được codebase.]",
+        "<strong>DISCOVERY XONG:</strong> Tiếp tục vòng lặp — từ explore codebase, surface patterns, discover next, prioritize, rồi vibe-code concept tiếp. Discovery giờ là continuous, không phải quarterly. Ví dụ: từ codebase, discover next-step features rồi dùng AI nhanh chóng thực hoá thành prototype để validate và tiếp tục vòng lặp Discovery.",
+        "<strong>KẾT QUẢ (~1 phút):</strong> Sau 2 tháng, con số thật: 5× nhanh hơn từ concept đến alignment — tuần xuống ngày. ~80% giảm delivery time — 10–12 tuần xuống 2 tuần. Discovery loop: quarterly → continuous. Nhưng quan trọng hơn: những con số này không phải điểm đến. Đây là vòng đầu tiên. Mỗi loop iteration compound — discovery nhanh hơn → concept tốt hơn → delivery tight hơn → thêm thời gian discover.",
+        "<strong>DRAG (~1.5 phút):</strong> Framework quyết định giao gì cho AI: DRAG — Drafting, Research, Analysis, Grunt Work. Hai vùng: Capped payoff — đầu tư bao nhiêu cũng không tăng thêm, giao cho AI. Uncapped payoff — product strategy, architecture, UX decisions — bạn phải tự làm. AI như thiên tài say rượu — brilliant nhưng unreliable. Để AI ngồi ghế phụ. Bạn vẫn phải cầm lái.",
+        "<strong>DÙNG AI THÔNG MINH:</strong> Tốc độ là kết quả. Thông minh là phương pháp. Kết nối mỗi bước loop với nguyên tắc: DRAG cho việc cơ học, phán đoán người cho chiến lược, tư duy Fool cho khám phá.",
+        "<strong>CÂY QUYẾT ĐỊNH:</strong> Sprint tới: trước khi code, hỏi — đây là quyết định CÁI GÌ hay task THẾ NÀO? Luôn tách nhỏ trước.",
+        "<strong>KẾT (~1 phút):</strong> Takeaway cho từng người: PM — vibe-code concept tiếp theo, show đừng kể. Designer — nhảy vào loop ở bất kỳ điểm nào, critique prototype, explore UX patterns với agents. Engineer — decompose ticket tiếp theo, DRAG phần Zone 1, giữ architecture decisions cho mình. Tất cả — hỏi câu hỏi 'ngây thơ', explore trước khi build. 2 tháng trước hỏi: AI có giúp build nhanh hơn? Giờ biết: không chỉ speed up delivery — nó thay đổi cách tìm ra cái cần build. Cảm ơn mọi người! Sẵn sàng trả lời câu hỏi."
       ]
     };
 
