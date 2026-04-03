@@ -769,10 +769,108 @@
         max-width: 100%
       }
     }
+
+    /* ===== THEME TOGGLE BUTTON ===== */
+    .tbtn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1px solid var(--glb);
+      background: var(--gl);
+      color: var(--t2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 15px;
+      transition: .3s;
+      backdrop-filter: blur(10px)
+    }
+    .tbtn:hover { border-color: var(--hot); }
+
+    /* ===== LIGHT MODE ===== */
+    body[data-theme="light"] {
+      --bg: #f0f4f8;
+      --bg2: #e2e8f0;
+      --bgc: #ffffff;
+      --hot: #ea580c;
+      --warm: #b45309;
+      --cool: #0369a1;
+      --green: #047857;
+      --purple: #6d28d9;
+      --rose: #be123c;
+      --t1: #0f172a;
+      --t2: #1e293b;
+      --t3: #475569;
+      --gl: rgba(15,23,42,.05);
+      --glb: rgba(15,23,42,.1);
+      background: var(--bg);
+      color: var(--t1);
+    }
+    /* Navbar */
+    body[data-theme="light"] .nb {
+      background: rgba(255,255,255,.94);
+      border-bottom-color: rgba(15,23,42,.08);
+    }
+    /* Glow orbs — whisper-soft in light */
+    body[data-theme="light"] .go { opacity: .04; }
+    /* Nav arrows */
+    body[data-theme="light"] .nab {
+      background: rgba(255,255,255,.85);
+      border-color: rgba(15,23,42,.1);
+    }
+    /* Nav dot tooltip */
+    body[data-theme="light"] .snd .dtt {
+      box-shadow: 0 4px 16px rgba(0,0,0,.1);
+    }
+    /* Speaker notes */
+    body[data-theme="light"] .spn {
+      background: rgba(248,250,252,.97);
+      border-top-color: var(--hot);
+    }
+    /* Quote block */
+    body[data-theme="light"] .qb {
+      background: rgba(234,88,12,.05);
+      border-left-color: var(--hot);
+    }
+    /* Timeline dot uses --bg for center fill */
+    body[data-theme="light"] .tl-dot { background: var(--bg); }
+    /* Vertical flow dot center */
+    body[data-theme="light"] .vf-item::before { background: var(--bg); }
+    /* Video label strip */
+    body[data-theme="light"] .video-label {
+      background: rgba(3,105,161,.05);
+    }
+    /* Card hover shadow */
+    body[data-theme="light"] .c:hover {
+      box-shadow: 0 8px 24px rgba(234,88,12,.1);
+    }
+    /* Stat cards */
+    body[data-theme="light"] .sc2 {
+      box-shadow: 0 1px 4px rgba(15,23,42,.06);
+    }
+    /* ---- SVG text fixes: near-white fills invisible on light bg ---- */
+    body[data-theme="light"] svg text[fill="#f1f5f9"],
+    body[data-theme="light"] svg text[fill="#e2e8f0"] { fill: #0f172a; }
+    body[data-theme="light"] svg text[fill="#c4b5a0"] { fill: #64748b; }
+    body[data-theme="light"] svg text[fill="#94a3b8"] { fill: #64748b; }
+    body[data-theme="light"] svg text[fill="#475569"] { fill: #334155; }
+    /* Yellow text low-contrast on white */
+    body[data-theme="light"] svg text[fill="#f7c948"] { fill: #92400e; }
+    /* Light green text low-contrast on white */
+    body[data-theme="light"] svg text[fill="#34d399"] { fill: #065f46; }
+    /* Sky blue text low-contrast on white */
+    body[data-theme="light"] svg text[fill="#38bdf8"] { fill: #0369a1; }
+    /* SVG connector lines — near-invisible dark lines become subtle gray */
+    body[data-theme="light"] svg path[stroke="#1e293b"],
+    body[data-theme="light"] svg line[stroke="#1e293b"],
+    body[data-theme="light"] svg line[stroke="#334155"] { stroke: rgba(15,23,42,.15); }
+    /* SVG rect strokes for yellow boxes */
+    body[data-theme="light"] svg rect[stroke="#f7c948"] { stroke: #92400e; }
   </style>
 </head>
 
-<body>
+<body data-theme="light">
 
   <!-- NAV BAR -->
   <div class="nb">
@@ -784,6 +882,8 @@
     </div>
     <div class="nr">
       <span class="ni" id="notesIndicator">[N] Notes off</span>
+      <span class="ni" id="btnShort" onclick="toggleShort()" style="cursor:pointer" title="[S] Short version">[S] Short</span>
+      <button class="tbtn" id="btnTheme" onclick="toggleTheme()" title="Toggle light/dark mode">☀️</button>
       <div class="lt">
         <button class="lb a" id="btnEN" onclick="setLang('en')">EN</button>
         <button class="lb" id="btnVI" onclick="setLang('vi')">VI</button>
@@ -1741,7 +1841,11 @@
 
   <script>
     let currentSlide = 0;
-    const totalSlides = 13;
+    const fullSlides = 13;
+    const shortSlideMap = [0, 1, 2, 3, 4, 5, 6, 7, 12];
+    let totalSlides = fullSlides;
+    let shortMode = false;
+    function actualSlide(i) { return shortMode ? shortSlideMap[i] : i; }
     let currentLang = 'en';
     let notesVisible = false;
 
@@ -1757,9 +1861,11 @@
         const b = document.createElement('button');
         b.className = 'snd' + (i === currentSlide ? ' a' : '');
         b.onclick = () => goToSlide(i);
-        b.innerHTML = `<span class="dc2"></span><span class="dtt">${slideNames[currentLang][i]}</span>`;
+        b.innerHTML = `<span class="dc2"></span><span class="dtt">${slideNames[currentLang][actualSlide(i)]}</span>`;
         n.appendChild(b);
       }
+      document.getElementById('slideCounter').textContent = String(currentSlide + 1).padStart(2, '0') + ' / ' + String(totalSlides).padStart(2, '0');
+      document.getElementById('progressFill').style.width = ((currentSlide + 1) / totalSlides * 100) + '%';
     }
     buildSlideNav();
 
@@ -1797,7 +1903,7 @@
     };
 
     function updateNotes() {
-      document.getElementById('notesContent').innerHTML = speakerNotes[currentLang][currentSlide] || '';
+      document.getElementById('notesContent').innerHTML = speakerNotes[currentLang][actualSlide(currentSlide)] || '';
     }
 
     function toggleNotes() {
@@ -1812,28 +1918,64 @@
       if (i < 0 || i >= totalSlides || i === currentSlide) return;
       const sl = document.querySelectorAll('.s');
       const p = currentSlide;
-      sl[p].classList.remove('a');
-      if (i > p) sl[p].classList.add('el');
-      else { sl[p].style.opacity = '0'; sl[p].style.transform = 'translateX(60px)'; }
-      setTimeout(() => { sl[p].classList.remove('el'); sl[p].style.opacity = ''; sl[p].style.transform = ''; }, 600);
+      const pIdx = actualSlide(p);
+      const iIdx = actualSlide(i);
+      sl[pIdx].classList.remove('a');
+      if (i > p) sl[pIdx].classList.add('el');
+      else { sl[pIdx].style.opacity = '0'; sl[pIdx].style.transform = 'translateX(60px)'; }
+      setTimeout(() => { sl[pIdx].classList.remove('el'); sl[pIdx].style.opacity = ''; sl[pIdx].style.transform = ''; }, 600);
       currentSlide = i;
-      sl[i].classList.add('a');
-      document.getElementById('slideCounter').textContent = String(i + 1).padStart(2, '0') + ' / ' + totalSlides;
+      sl[iIdx].classList.add('a');
+      document.getElementById('slideCounter').textContent = String(i + 1).padStart(2, '0') + ' / ' + String(totalSlides).padStart(2, '0');
       document.getElementById('progressFill').style.width = ((i + 1) / totalSlides * 100) + '%';
       document.querySelectorAll('.snd').forEach((d, j) => d.classList.toggle('a', j === i));
       updateNotes();
       // Pause all videos when leaving a slide
-      sl[p].querySelectorAll('video').forEach(v => v.pause());
+      sl[pIdx].querySelectorAll('video').forEach(v => v.pause());
     }
 
     function nextSlide() { goToSlide(currentSlide + 1); }
     function prevSlide() { goToSlide(currentSlide - 1); }
 
+    function toggleShort() {
+      // Deactivate current slide in DOM before switching mode
+      const sl = document.querySelectorAll('.s');
+      sl[actualSlide(currentSlide)].classList.remove('a');
+      shortMode = !shortMode;
+      totalSlides = shortMode ? shortSlideMap.length : fullSlides;
+      if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+      sl[actualSlide(currentSlide)].classList.add('a');
+      buildSlideNav();
+      updateNotes();
+      document.getElementById('slideCounter').textContent = String(currentSlide + 1).padStart(2, '0') + ' / ' + String(totalSlides).padStart(2, '0');
+      document.getElementById('progressFill').style.width = ((currentSlide + 1) / totalSlides * 100) + '%';
+      const btn = document.getElementById('btnShort');
+      btn.classList.toggle('on', shortMode);
+      btn.textContent = shortMode ? '[S] Full' : '[S] Short';
+      btn.title = shortMode ? 'Switch to full version' : 'Switch to short version';
+    }
+
     document.addEventListener('keydown', e => {
       if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
       if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
       if (e.key === 'n' || e.key === 'N') toggleNotes();
+      if (e.key === 's' || e.key === 'S') toggleShort();
     });
+
+    function toggleTheme() {
+      const isDark = document.body.dataset.theme === 'dark';
+      document.body.dataset.theme = isDark ? 'light' : 'dark';
+      document.getElementById('btnTheme').textContent = isDark ? '\u2600\ufe0f' : '\uD83C\uDF19';
+      try { localStorage.setItem('theme', document.body.dataset.theme); } catch(e) {}
+    }
+
+    // Init theme from storage or default to light
+    (function() {
+      const saved = (() => { try { return localStorage.getItem('theme'); } catch(e) { return null; } })();
+      const theme = saved || 'light';
+      document.body.dataset.theme = theme;
+      document.getElementById('btnTheme').textContent = theme === 'dark' ? '\uD83C\uDF19' : '\u2600\ufe0f';
+    })();
 
     function setLang(l) {
       currentLang = l;
