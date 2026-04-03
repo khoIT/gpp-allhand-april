@@ -892,9 +892,8 @@
       <div class="go gp" style="top:50%;right:-200px"></div>
       <div class="si">
         <div class="a1 st" data-en="THE CHALLENGE" data-vi="THÁCH THỨC">THE CHALLENGE</div>
-        <h2 class="a2 sh" data-en="Discovery & Delivery Before <span class='hl'>Opus 4.6</span> (Feb 2026)"
-          data-vi="Discovery & Delivery Trước <span class='hl'>Opus 4.6</span> (Tháng 2/2026)">
-          Discovery & Delivery Before <span class="hl">Opus 4.6</span> (Feb 2026)
+        <h2 class="a2 sh" data-en="Can <span class='hl'>AI</span> Really Help?" data-vi="<span class='hl'>AI</span> Có Thực Sự Giúp Được Không?">
+          Can <span class="hl">AI</span> Really Help?
         </h2>
         <!-- Context: Analytics team & Dashboard Builder -->
         <p class="a3 sb" style="max-width:760px"
@@ -902,50 +901,42 @@
           data-vi="Team Analytics ra đời để giải quyết thách thức hiển thị dữ liệu của VNGG — tool nội bộ với ~500 user. Mục tiêu: tạo dashboard nhanh & tự phục vụ. Nhưng đến Q4 2025, việc tạo dashboard vẫn còn thủ công do phân quyền, performance và data.">
           Analytics team was born to solve VNGG's data visualization challenges — an internal tool with ~500 users. Goal: make dashboard creation fast & self-service. But until Q4 2025, creating dashboards remained manual due to permissions, performance, and data constraints.
         </p>
-        <div class="a4 vf-wrap">
-          <!-- OLD PROCESS -->
-          <div class="vf-col bf">
-            <div class="vf-hdr" style="color:var(--rose)" data-en="❌ OLD PROCESS — MANUAL DASHBOARD CREATION" data-vi="❌ QUY TRÌNH CŨ — TẠO DASHBOARD THỦ CÔNG">❌ OLD PROCESS — MANUAL DASHBOARD CREATION</div>
-            <div class="vf-list rl">
-              <div class="vf-item">
-                <span class="vf-name" data-en="Business user requests dashboard" data-vi="Business user yêu cầu dashboard">Business user requests dashboard</span>
-              </div>
-              <div class="vf-item pain">
-                <span class="vf-name" data-en="DA validates data & writes SQL" data-vi="DA thẩm định data & viết SQL">DA validates data & writes SQL</span>
-                <span class="vf-badge wait">DAYS–WEEKS</span>
-              </div>
-              <div class="vf-item pain">
-                <span class="vf-name" data-en="Analytics builds & displays on tool" data-vi="Analytics xây & hiển thị lên tool">Analytics builds & displays on tool</span>
-                <span class="vf-badge wait">WEEKS</span>
-              </div>
-              <div class="vf-item cut">
-                <span class="vf-name" data-en="Complex dashboards: filters in filters, global/local, multiple chart types" data-vi="Dashboard phức tạp: filter trong filter, global/local, nhiều chart type">Complex dashboards: filters in filters, global/local, multiple chart types</span>
-                <span class="vf-badge rework">WEEKS–MONTHS</span>
-              </div>
-            </div>
-            <div class="vf-summary" style="background:rgba(251,113,133,.06);color:var(--rose)" data-en="RESULT: WEEKS TO MONTHS PER COMPLEX DASHBOARD" data-vi="KẾT QUẢ: TUẦN ĐẾN THÁNG CHO MỖI DASHBOARD PHỨC TẠP">RESULT: WEEKS TO MONTHS PER COMPLEX DASHBOARD</div>
+        <!-- OLD PROCESS IMAGE + Q1 2026 MANDATE CARD -->
+        <div class="a4" style="display:flex;gap:20px;width:100%;align-items:stretch">
+          <div style="flex:1.4;display:flex;align-items:center;justify-content:center">
+            <img src="slide 2 - old way.png" alt="Old Process — Manual Dashboard Creation" style="width:100%;max-width:580px;border-radius:14px;border:1px solid rgba(251,113,133,.2);box-shadow:0 4px 24px rgba(0,0,0,.3)">
           </div>
-          <!-- THE MANDATE -->
-          <div class="vf-col af">
-            <div class="vf-hdr" style="color:var(--warm)" data-en="⚡ Q1 2026 MANDATE" data-vi="⚡ CHỈ THỊ Q1 2026">⚡ Q1 2026 MANDATE</div>
-            <div class="vf-list gl">
-              <div class="vf-item">
-                <span class="vf-name" data-en="Release Dashboard Builder in Q2" data-vi="Release Dashboard Builder trong Q2">Release Dashboard Builder in Q2</span>
-                <span class="vf-badge fast">🎯 GOAL</span>
+          <!-- Q1 2026 MANDATE — styled card -->
+          <div style="flex:0.6;background:linear-gradient(135deg,rgba(30,41,59,.95),rgba(15,23,42,.98));border:1px solid rgba(247,201,72,.25);border-radius:16px;padding:20px 18px;display:flex;flex-direction:column;gap:12px;box-shadow:0 4px 24px rgba(0,0,0,.3)">
+            <div style="background:linear-gradient(135deg,#f7c948,#ff6b35);border-radius:10px;padding:10px 14px;text-align:center">
+              <div style="font-family:var(--fm);font-size:10px;letter-spacing:3px;color:#0f172a;font-weight:800">⚡ Q1 2026 MANDATE</div>
+            </div>
+            <div style="background:rgba(255,255,255,.06);border-radius:10px;padding:12px;text-align:center;border:1px solid rgba(255,255,255,.08)">
+              <div style="font-family:var(--fh);font-size:15px;font-weight:700;color:#f1f5f9" data-en="Release Dashboard Builder in Q2" data-vi="Release Dashboard Builder trong Q2">Release Dashboard Builder in Q2</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:0 4px">
+              <span style="font-size:14px">🎯</span>
+              <div style="font-family:var(--fh);font-size:12px;font-weight:700;color:var(--warm)" data-en="GOAL" data-vi="MỤC TIÊU">GOAL</div>
+            </div>
+            <div style="background:rgba(52,211,153,.08);border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:8px;border:1px solid rgba(52,211,153,.15)">
+              <span style="color:var(--green);font-size:14px">✅</span>
+              <span style="font-size:11px;color:#cbd5e1" data-en="Self-service: users config their own dashboards" data-vi="Tự phục vụ: user tự config dashboard">Self-service: users config their own dashboards</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <div style="flex:1;background:rgba(247,201,72,.06);border-radius:8px;padding:8px 10px;border:1px solid rgba(247,201,72,.15)">
+                <div style="font-size:9px;color:#94a3b8" data-en="Original estimate" data-vi="Ước tính ban đầu">Original estimate</div>
+                <div style="font-family:var(--fm);font-size:13px;font-weight:700;color:var(--warm)">~2 MONTHS</div>
+                <div style="font-size:9px;color:#64748b" data-en="basic scope by 30/4" data-vi="scope cơ bản trước 30/4">basic scope by 30/4</div>
               </div>
-              <div class="vf-item">
-                <span class="vf-name" data-en="Self-service: users config their own dashboards" data-vi="Tự phục vụ: user tự config dashboard">Self-service: users config their own dashboards</span>
-              </div>
-              <div class="vf-item">
-                <span class="vf-name" data-en="Original estimate: basic scope by 30/4" data-vi="Ước tính ban đầu: scope cơ bản trước 30/4">Original estimate: basic scope by 30/4</span>
-                <span class="vf-badge wait">~2 MONTHS</span>
-              </div>
-              <div class="vf-item">
-                <span class="vf-name" data-en="Chatbot & NL interaction: even longer" data-vi="Chatbot & tương tác ngôn ngữ tự nhiên: còn lâu hơn">Chatbot & NL interaction: even longer</span>
-                <span class="vf-badge wait">TBD</span>
+              <div style="flex:1;background:rgba(148,163,184,.06);border-radius:8px;padding:8px 10px;border:1px solid rgba(148,163,184,.15)">
+                <div style="font-size:9px;color:#94a3b8" data-en="Chatbot &amp; NL" data-vi="Chatbot &amp; NL">Chatbot &amp; NL</div>
+                <div style="font-family:var(--fm);font-size:13px;font-weight:700;color:#94a3b8">TBD</div>
+                <div style="font-size:9px;color:#64748b" data-en="even longer" data-vi="còn lâu hơn">even longer</div>
               </div>
             </div>
-            <div class="vf-summary" style="background:rgba(247,201,72,.06);color:var(--warm)" data-en="QUESTION: CAN AI AGENTS ACTUALLY HELP?" data-vi="CÂU HỎI: AI AGENTS CÓ THỰC SỰ GIÚP ĐƯỢC KHÔNG?">QUESTION: CAN AI AGENTS ACTUALLY HELP?</div>
+            <div style="background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(99,102,241,.12));border:1px solid rgba(56,189,248,.2);border-radius:10px;padding:10px 14px;text-align:center;margin-top:auto">
+              <div style="font-family:var(--fm);font-size:10px;letter-spacing:1px;font-weight:700;color:#38bdf8" data-en="🤖 QUESTION: CAN AI AGENTS ACTUALLY HELP?" data-vi="🤖 CÂU HỎI: AI AGENTS CÓ THỰC SỰ GIÚP ĐƯỢC KHÔNG?">🤖 QUESTION: CAN AI AGENTS ACTUALLY HELP?</div>
+            </div>
           </div>
         </div>
         <div class="a5 qb"><span

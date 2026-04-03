@@ -23,11 +23,11 @@
 - **Section label:** THE CHALLENGE
 - **Heading:** Discovery & Delivery Before Opus 4.6 (Feb 2026)
 - **Content:**
-  - Analytics team context (~500 users, VNGG data visualization)
-  - Old process: Business user → DA validates SQL → Analytics builds → weeks to months
-  - Q1 2026 Mandate: Release Dashboard Builder in Q2
-  - Question: Can AI agents actually help?
+  - Intro paragraph: Analytics team context (~500 users, VNGG data visualization)
+  - **Left (image):** `slide 2 - old way.png` — infographic of old manual dashboard creation process
+  - **Right (styled card):** Q1 2026 Mandate — Release Dashboard Builder in Q2, goal, estimates (~2 months / TBD), question: "Can AI agents actually help?"
 - **Quote:** Opus 4.6 released Feb 2026 changed everything
+- **Images:** `slide 2 - old way.png`, `slide 2 new way.png` (unused, available)
 
 ---
 
