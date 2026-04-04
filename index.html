@@ -882,7 +882,7 @@
     </div>
     <div class="nr">
       <span class="ni" id="notesIndicator">[N] Notes off</span>
-      <span class="ni" id="btnShort" onclick="toggleShort()" style="cursor:pointer" title="[S] Short version">[S] Short</span>
+      <span class="ni on" id="btnShort" onclick="toggleShort()" style="cursor:pointer" title="Switch to full version">[S] Full</span>
       <button class="tbtn" id="btnTheme" onclick="toggleTheme()" title="Toggle light/dark mode">☀️</button>
       <div class="lt">
         <button class="lb a" id="btnEN" onclick="setLang('en')">EN</button>
@@ -1843,8 +1843,8 @@
     let currentSlide = 0;
     const fullSlides = 13;
     const shortSlideMap = [0, 1, 2, 3, 4, 5, 6, 7, 12];
-    let totalSlides = fullSlides;
     let shortMode = true;
+    let totalSlides = shortMode ? shortSlideMap.length : fullSlides;
     function actualSlide(i) { return shortMode ? shortSlideMap[i] : i; }
     let currentLang = 'en';
     let notesVisible = false;
