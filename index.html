@@ -849,6 +849,23 @@
     body[data-theme="light"] .sc2 {
       box-shadow: 0 1px 4px rgba(15,23,42,.06);
     }
+    /* ---- Closing slide cards: white borders invisible on light bg ---- */
+    body[data-theme="light"] [data-slide="12"] .a3 > div {
+      background: rgba(15,23,42,.03) !important;
+      border-color: rgba(15,23,42,.12) !important;
+    }
+    body[data-theme="light"] [data-slide="12"] .a3 > div > div:last-child {
+      border-top-color: rgba(15,23,42,.08) !important;
+    }
+    /* ---- Closing slide bottom box ---- */
+    body[data-theme="light"] [data-slide="12"] .a5 > div {
+      background: rgba(234,88,12,.05) !important;
+    }
+    /* ---- Precision slide cards ---- */
+    body[data-theme="light"] [data-slide="13"] .a4 > div {
+      background: rgba(15,23,42,.03) !important;
+      border-color: rgba(15,23,42,.12) !important;
+    }
     /* ---- SVG text fixes: near-white fills invisible on light bg ---- */
     body[data-theme="light"] svg text[fill="#f1f5f9"],
     body[data-theme="light"] svg text[fill="#e2e8f0"] { fill: #0f172a; }
@@ -1754,34 +1771,34 @@
         <!-- Two key ideas -->
         <div class="a3" style="display:flex;gap:20px;width:100%;max-width:920px;align-items:stretch">
           <!-- Idea 1 -->
-          <div style="flex:1;background:linear-gradient(135deg,rgba(255,107,53,.08),rgba(247,201,72,.04));border:1px solid rgba(255,107,53,.2);border-radius:16px;padding:28px 28px 24px;text-align:left;display:flex;flex-direction:column">
+          <div style="flex:1;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 28px 24px;text-align:left;display:flex;flex-direction:column">
             <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
               <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,107,53,.12);border:2px solid rgba(255,107,53,.35);display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:20px;font-weight:800;color:var(--hot);flex-shrink:0">1</div>
               <div style="font-family:var(--fm);font-size:14px;letter-spacing:2px;color:var(--hot);font-weight:700" data-en="THE WAVE" data-vi="LÀN SÓNG">THE WAVE</div>
             </div>
             <div style="font-size:15px;color:var(--t1);line-height:1.7;flex:1"
-              data-en="AI will change the way we work — deeply and dramatically. You can ride the wave or go against it."
-              data-vi="AI sẽ thay đổi cách chúng ta làm việc — sâu sắc và mạnh mẽ. Bạn có thể cưỡi sóng hoặc chống lại nó.">
-              AI will change the way we work — deeply and dramatically. You can ride the wave or go against it.
+              data-en="In 2007, mobile gaming looked like a toy — Snake on Nokia. Then the App Store launched in 2008. Companies that took it seriously built empires. Those that dismissed it got left behind. Today mobile generates <strong style='color:var(--hot)'>over 50% of all gaming revenue</strong> — a $100B+ market that didn't exist 17 years ago. AI agents are at that same inflection point for how we publish and operate games."
+              data-vi="Năm 2007, mobile gaming trông như đồ chơi — Snake trên Nokia. Rồi App Store ra mắt 2008. Công ty nào nghiêm túc đã xây đế chế. Ai coi thường bị bỏ lại. Hôm nay mobile tạo ra <strong style='color:var(--hot)'>hơn 50% tổng doanh thu gaming</strong> — thị trường $100B+ không tồn tại 17 năm trước. AI agents đang ở đúng điểm bùng nổ đó cho cách chúng ta vận hành và phát hành game.">
+              In 2007, mobile gaming looked like a toy — Snake on Nokia. Then the App Store launched in 2008. Companies that took it seriously built empires. Those that dismissed it got left behind. Today mobile generates <strong style="color:var(--hot)">over 50% of all gaming revenue</strong> — a $100B+ market that didn't exist 17 years ago. AI agents are at that same inflection point for how we publish and operate games.
             </div>
-            <div style="font-family:var(--fm);font-size:14px;color:var(--warm);font-weight:700;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,107,53,.15)"
-              data-en="The choice is yours."
-              data-vi="Sự lựa chọn là của bạn.">
-              The choice is yours.
+            <div style="font-family:var(--fm);font-size:14px;color:var(--hot);font-weight:700;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08)"
+              data-en="The wave is here. The choice is yours."
+              data-vi="Làn sóng đã đến. Sự lựa chọn là của bạn.">
+              The wave is here. The choice is yours.
             </div>
           </div>
           <!-- Idea 2 -->
-          <div style="flex:1;background:linear-gradient(135deg,rgba(56,189,248,.08),rgba(167,139,250,.04));border:1px solid rgba(56,189,248,.2);border-radius:16px;padding:28px 28px 24px;text-align:left;display:flex;flex-direction:column">
+          <div style="flex:1;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 28px 24px;text-align:left;display:flex;flex-direction:column">
             <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
-              <div style="width:44px;height:44px;border-radius:50%;background:rgba(56,189,248,.12);border:2px solid rgba(56,189,248,.35);display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:20px;font-weight:800;color:var(--cool);flex-shrink:0">2</div>
-              <div style="font-family:var(--fm);font-size:14px;letter-spacing:2px;color:var(--cool);font-weight:700" data-en="THE LESSON" data-vi="BÀI HỌC">THE LESSON</div>
+              <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,107,53,.12);border:2px solid rgba(255,107,53,.35);display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:20px;font-weight:800;color:var(--hot);flex-shrink:0">2</div>
+              <div style="font-family:var(--fm);font-size:14px;letter-spacing:2px;color:var(--hot);font-weight:700" data-en="THE LESSON" data-vi="BÀI HỌC">THE LESSON</div>
             </div>
             <div style="font-size:15px;color:var(--t1);line-height:1.7;flex:1"
-              data-en="Change is never easy. During the dot-com bubble, <strong style='color:#fb7185'>52% of companies</strong> that went public died. <strong style='color:#fb7185'>$5 trillion</strong> wiped out. But the survivors — Amazon, eBay — applied technology to <em>real problems</em>, not just rode hype."
-              data-vi="Thay đổi không bao giờ dễ. Trong bong bóng dot-com, <strong style='color:#fb7185'>52% công ty</strong> niêm yết đã chết. <strong style='color:#fb7185'>$5 nghìn tỷ</strong> bốc hơi. Nhưng những người sống sót — Amazon, eBay — áp dụng công nghệ vào <em>vấn đề thật</em>, không chỉ cưỡi hype.">
-              Change is never easy. During the dot-com bubble, <strong style="color:#fb7185">52% of companies</strong> that went public died. <strong style="color:#fb7185">$5 trillion</strong> wiped out. But the survivors — Amazon, eBay — applied technology to <em>real problems</em>, not just rode hype.
+              data-en="The companies that died in the dot-com bubble didn't fail because they ignored the internet — they failed because they <strong style='color:var(--hot)'>applied it to the wrong things</strong>. 52% gone. $5 trillion wiped out. Same with AI: every team at GPP knows their own domain best — and every domain has workflows where AI can help. The question isn't whether to use AI. It's <strong style='color:var(--hot)'>where</strong>."
+              data-vi="Những công ty chết trong bong bóng dot-com không thất bại vì phớt lờ internet — họ thất bại vì <strong style='color:var(--hot)'>áp dụng sai chỗ</strong>. 52% biến mất. $5 nghìn tỷ bốc hơi. AI cũng vậy: mỗi team ở GPP hiểu domain của mình nhất — và domain nào cũng có workflow mà AI có thể giúp. Câu hỏi không phải có nên dùng AI không. Mà là <strong style='color:var(--hot)'>dùng ở đâu</strong>.">
+              The companies that died in the dot-com bubble didn't fail because they ignored the internet — they failed because they <strong style="color:var(--hot)">applied it to the wrong things</strong>. 52% gone. $5 trillion wiped out. Same with AI: every team at GPP knows their own domain best — and every domain has workflows where AI can help. The question isn't whether to use AI. It's <strong style="color:var(--hot)">where</strong>.
             </div>
-            <div style="font-family:var(--fm);font-size:14px;color:var(--cool);font-weight:700;margin-top:16px;padding-top:14px;border-top:1px solid rgba(56,189,248,.15)"
+            <div style="font-family:var(--fm);font-size:14px;color:var(--hot);font-weight:700;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08)"
               data-en="That's our challenge — and our opportunity."
               data-vi="Đó là thách thức — và cơ hội của chúng ta.">
               That's our challenge — and our opportunity.
@@ -1829,9 +1846,9 @@
           </div>
           <div style="background:rgba(255,107,53,.06);border:none;border-left:3px solid var(--hot);border-radius:0;padding:12px 20px;text-align:left">
             <div style="font-size:12px;color:var(--t3);line-height:1.7"
-              data-en="Analytics has found the way to become the trusted advisor — the designated driver for AI, the drunk genius. <strong style='color:var(--warm)'>We hope to see yours.</strong>"
+              data-en="We found the way to become the trusted advisor — the designated driver for AI, the drunk genius. <strong style='color:var(--warm)'>We hope to see yours.</strong>"
               data-vi="Analytics đã tìm ra cách trở thành trusted advisor — người cầm lái cho AI, thiên tài say. <strong style='color:var(--warm)'>Chúng tôi hy vọng sẽ thấy của bạn.</strong>">
-              Analytics has found the way to become the trusted advisor — the designated driver for AI, the drunk genius. <strong style="color:var(--warm)">We hope to see yours.</strong>
+              We found the way to become the trusted advisor — the designated driver for AI, the drunk genius. <strong style="color:var(--warm)">We hope to see yours.</strong>
             </div>
           </div>
         </div>
@@ -1981,7 +1998,7 @@
         "<strong>DRAG (~1.5 min):</strong> A framework for deciding what to hand to AI: DRAG — Drafting, Research, Analysis, Grunt Work. Two zones: Capped payoff — no matter how much effort, returns plateau. Let AI handle these. Uncapped payoff — product strategy, architecture, UX decisions — you must own these. AI is like a drunk genius — brilliant but unreliable. Let AI ride shotgun. You still drive.",
         "<strong>INTELLIGENT USE:</strong> Speed is the outcome. Intelligence is the method. Connect each loop step to the principle: DRAG for mechanical work, human judgment for strategy, Fool mindset for discovery.",
         "<strong>DECISION FRAMEWORK:</strong> Next sprint: before coding, ask — is this a WHAT decision or a HOW task? Decompose first, always.",
-        "<strong>CLOSE (~1.5 min):</strong> Two ideas to walk away with. First: AI will change how we work — deeply and dramatically. This wave is real and it's not slowing down. You can ride with it or go against it — the choice is yours. Second: change is never easy. During the dot-com bubble, 52% of companies that went public died. Five trillion dollars wiped out. But the survivors — Amazon, eBay — they weren't the loudest or the most funded. They applied technology to real problems, not just rode hype. Amazon lost 90% of its stock value but survived — because it solved something real. That's our challenge AND our opportunity: become the trusted advisor, the designated driver for AI — the drunk genius. I believe Analytics has found a realistic use case where AI shines: Concept → Delivery → Discovery. I hope to see more teams find theirs in the coming time. Thank you!",
+        "<strong>CLOSE (~1.5 min):</strong> Two ideas to walk away with. First — the wave. In 2007, mobile gaming was Snake on Nokia. Nobody took it seriously. Then the App Store launched, and companies that moved early built empires. Today mobile is over 50% of all gaming revenue — a hundred billion dollar market that didn't exist 17 years ago. AI agents are at that exact same inflection point for how we publish and operate games. The wave is here. Second — the lesson. The dot-com companies that died — 52% of them — didn't fail because they ignored the internet. They failed because they applied it to the wrong things. Same risk with AI. Every team at GPP knows their own domain best — and every domain has workflows where AI can help. The question isn't whether to use AI. It's where. That's our challenge and our opportunity. Analytics found 3 precise spots. I hope every team finds theirs. Thank you!",
         "<strong>PRINCIPLE (~1.5 min):</strong> After our results, the natural instinct is: let's build agents for everything. We almost fell into this trap ourselves. On the left — three agent ideas that sound great on paper but would have burned weeks. Auto status reports: nobody reads auto-generated reports, curation IS the value. AI-written PRDs: specs look complete but miss the hard judgment calls — false confidence. Sprint planner bot: requires team context, interpersonal dynamics, priorities that shift daily. The common thread? They all automate JUDGMENT — where human thinking IS the value. On the right — our three agents that actually worked. They all automate EXECUTION — clear input, bounded scope, verifiable output. Simple test before building any agent: will a human need to redo this anyway? If yes — don't build it. Automate the HOW, not the WHAT."
       ],
       vi: [
@@ -1997,7 +2014,7 @@
         "<strong>DRAG (~1.5 phút):</strong> Framework quyết định giao gì cho AI: DRAG — Drafting, Research, Analysis, Grunt Work. Hai vùng: Capped payoff — đầu tư bao nhiêu cũng không tăng thêm, giao cho AI. Uncapped payoff — product strategy, architecture, UX decisions — bạn phải tự làm. AI như thiên tài say rượu — brilliant nhưng unreliable. Để AI ngồi ghế phụ. Bạn vẫn phải cầm lái.",
         "<strong>DÙNG AI THÔNG MINH:</strong> Tốc độ là kết quả. Thông minh là phương pháp. Kết nối mỗi bước loop với nguyên tắc: DRAG cho việc cơ học, phán đoán người cho chiến lược, tư duy Fool cho khám phá.",
         "<strong>CÂY QUYẾT ĐỊNH:</strong> Sprint tới: trước khi code, hỏi — đây là quyết định CÁI GÌ hay task THẾ NÀO? Luôn tách nhỏ trước.",
-        "<strong>KẾT (~1.5 phút):</strong> Hai ý tưởng để mang theo. Thứ nhất: AI sẽ thay đổi cách chúng ta làm việc — sâu sắc và mạnh mẽ. Làn sóng này có thật và không chậm lại. Bạn có thể cưỡi sóng hoặc chống lại — lựa chọn là của bạn. Thứ hai: thay đổi không bao giờ dễ. Trong bong bóng dot-com, 52% công ty niêm yết đã chết. 5 nghìn tỷ đô bốc hơi. Nhưng những người sống sót — Amazon, eBay — không phải ồn ào nhất hay được đầu tư nhiều nhất. Họ áp dụng công nghệ vào vấn đề thật, không chỉ cưỡi hype. Amazon mất 90% giá trị cổ phiếu nhưng sống sót — vì giải quyết vấn đề thật. Đó là thách thức VÀ cơ hội của chúng ta: trở thành trusted advisor, người cầm lái cho AI — thiên tài say. Tôi tin Analytics đã tìm được use case thực tế: Concept → Delivery → Discovery. Hy vọng thấy nhiều team tìm được use case của mình. Cảm ơn mọi người!",
+        "<strong>KẾT (~1.5 phút):</strong> Hai ý tưởng để mang theo. Thứ nhất — làn sóng. Năm 2007, mobile gaming là Snake trên Nokia. Không ai nghiêm túc. Rồi App Store ra mắt, công ty nào nhanh chân đã xây đế chế. Hôm nay mobile chiếm hơn 50% tổng doanh thu gaming — thị trường trăm tỷ đô không tồn tại 17 năm trước. AI agents đang ở đúng điểm bùng nổ đó cho cách chúng ta vận hành và phát hành game. Làn sóng đã đến. Th��� hai — bài học. Những công ty dot-com chết — 52% — không thất bại vì phớt lờ internet. Họ thất bại vì áp dụng sai chỗ. AI cũng có rủi ro tương tự. Mỗi team ở GPP hiểu domain của mình nhất — và domain nào cũng có workflow mà AI có thể giúp. Câu hỏi không phải có nên dùng AI không. Mà là dùng ở đâu. Đó là thách thức và cơ hội của chúng ta. Analytics tìm được 3 chỗ chính xác. Hy vọng mỗi team tìm được của mình. Cảm ơn mọi người!",
         "<strong>NGUYÊN TẮC (~1.5 phút):</strong> Sau khi thấy kết quả, bản năng tự nhiên là: build agent cho mọi thứ. Chúng tôi cũng suýt rơi vào bẫy này. Bên trái — 3 ý tưởng agent nghe hay trên giấy nhưng sẽ đốt hàng tuần. Auto status reports: không ai đọc báo cáo tự động, biên tập MỚI là giá trị. AI viết PRD: spec trông đầy đủ nhưng thiếu phán đoán quan trọng — sự tự tin sai lầm. Bot lập kế hoạch sprint: cần hiểu team, quan hệ, ưu tiên thay đổi hàng ngày. Điểm chung? Tất cả tự động hóa PHÁN ĐOÁN — nơi tư duy con người LÀ giá trị. Bên phải — 3 agent thực sự hiệu quả. Tất cả tự động hóa THỰC THI — input rõ, scope giới hạn, output verify được. Phép thử đơn giản: người có cần làm lại dù sao không? Nếu có — đừng build. Tự động hóa CÁCH LÀM, không phải CÁI GÌ."
       ]
     };
