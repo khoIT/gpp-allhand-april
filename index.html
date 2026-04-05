@@ -131,6 +131,17 @@
       color: #fff
     }
 
+    /* FULLSCREEN MODE */
+    body.fs .na,
+    body.fs .sn2 { display: none !important; }
+    body.fs .nb { display: none; }
+    body.fs.show-hdr .nb { display: flex; }
+    body.fs .spn { bottom: -200px !important; }
+    body.fs .s { padding: 30px 40px 20px; }
+    body.fs .si { max-width: 1280px; transform: scale(1.08); transform-origin: top center; }
+    /* HEADER HIDE (non-fullscreen) */
+    body.hide-hdr .nb { display: none; }
+
     /* SLIDES */
     .sv {
       width: 100%;
@@ -181,7 +192,7 @@
     /* TYPE */
     .st {
       font-family: var(--fm);
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--hot);
@@ -210,7 +221,7 @@
     }
 
     .sb {
-      font-size: 13px;
+      font-size: 15px;
       color: var(--t2);
       line-height: 1.7
     }
@@ -250,15 +261,15 @@
     }
 
     .ct {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
       margin-bottom: 4px
     }
 
     .cd {
-      font-size: 12px;
+      font-size: 14px;
       color: var(--t3);
-      line-height: 1.5
+      line-height: 1.6
     }
 
     /* STATS */
@@ -287,10 +298,10 @@
     }
 
     .sl {
-      font-size: 11px;
+      font-size: 13px;
       color: var(--t3);
       margin-top: 4px;
-      line-height: 1.4
+      line-height: 1.5
     }
 
     /* QUOTE */
@@ -925,7 +936,7 @@
       <div class="go gc" style="bottom:-120px;right:-80px"></div>
       <div class="si" style="align-items:center;text-align:center">
         <div class="a1">
-          <svg viewBox="100 10 400 200" style="width:100%;max-width:600px;height:auto" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="100 10 400 200" style="width:100%;max-width:720px;height:auto" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stop-color="#ff6b35" />
@@ -955,7 +966,7 @@
             <polygon points="405,72 415,78 408,82" fill="#38bdf8" opacity=".6" />
             <polygon points="302,142 298,152 292,144" fill="#34d399" opacity=".6" />
             <polygon points="194,78 186,72 192,66" fill="#ff6b35" opacity=".6" />
-            <!-- Node 1: PM Vibe Code -->
+            <!-- Node 1: PM AI Prototyping -->
             <circle cx="190" cy="75" r="48" fill="none" stroke="url(#hg1)" stroke-width="2.5" filter="url(#glow)" />
             <circle cx="190" cy="75" r="45" fill="rgba(255,107,53,.08)" />
             <text x="190" y="68" text-anchor="middle" fill="#ff6b35" font-size="28">🎨</text>
@@ -980,19 +991,19 @@
               letter-spacing="2">LOOP</text>
           </svg>
         </div>
-        <h1 class="a2 sh" style="font-size:clamp(30px,5vw,56px)">
+        <h1 class="a2 sh" style="font-size:clamp(36px,6vw,67px)">
           <span data-en="AI-Powered" data-vi="Phát Triển Với">AI-Powered</span><br>
           <span class="hl" data-en="Discovery & Delivery" data-vi="Khám Phá & Chuyển Giao AI">Discovery &
             Delivery</span>
         </h1>
-        <p class="a3 ss" style="text-align:center;max-width:640px;font-size:clamp(14px,1.8vw,20px)"
+        <p class="a3 ss" style="text-align:center;max-width:760px;font-size:clamp(17px,2.2vw,24px)"
           data-en="Four weeks of AI experimentation into a continuous discovery → delivery loop that collapsed timelines 5-10x."
-          data-vi="Cách team Analytics biến 2 tháng thử nghiệm AI thành vòng lặp khám phá → chuyển giao liên tục, đẩy nhanh delivery 5-10x.">
-          How Analytics team turned 1 month of AI experimentation into a continuous discovery/delivery loop that
+          data-vi="Bốn tuần thử nghiệm AI thành continuous delivery nhanh gấp 5-10x.">
+          How one month of AI experimentation turns a continuous loop that
           speed-up delivery 5-10x.
         </p>
         <div class="a4" style="margin-top:8px">
-          <span style="font-family:var(--fm);font-size:10px;color:var(--t3);letter-spacing:1px"
+          <span style="font-family:var(--fm);font-size:13px;color:var(--t3);letter-spacing:1px"
             data-en="GPP Analytics Team • April 2026" data-vi="GPP Analytics Team • April 2026">GPP Analytics Team •
             April
             2026</span>
@@ -1013,7 +1024,7 @@
           Can <span class="hl">AI</span> Really Help?
         </h2>
         <!-- Context: Analytics team & Dashboard Builder -->
-        <p class="a3 sb" style="max-width:760px"
+        <p class="a3 sb" style="max-width:860px;font-size:17px"
           data-en="Analytics team was born to solve VNGG's data visualization challenges — an internal tool with ~500 users. Goal: make dashboard creation fast & self-service. But until Q4 2025, creating dashboards remained manual due to permissions, performance, and data constraints."
           data-vi="Team Analytics ra đời để giải quyết thách thức hiển thị dữ liệu của VNGG — tool nội bộ với ~500 user. Mục tiêu: tạo dashboard nhanh & tự phục vụ. Nhưng đến Q4 2025, việc tạo dashboard vẫn còn thủ công do phân quyền, performance và data.">
           Analytics team was born to solve VNGG's data visualization challenges — an internal tool with ~500 users. Goal: make dashboard creation fast & self-service. But until Q4 2025, creating dashboards remained manual due to permissions, performance, and data constraints.
@@ -1021,38 +1032,38 @@
         <!-- OLD PROCESS IMAGE + Q1 2026 MANDATE CARD -->
         <div class="a4" style="display:flex;gap:20px;width:100%;align-items:stretch">
           <div style="flex:1.4;display:flex;align-items:center;justify-content:center">
-            <img src="slide 2 - old way.png" alt="Old Process — Manual Dashboard Creation" style="width:100%;max-width:580px;border-radius:14px;border:1px solid rgba(251,113,133,.2);box-shadow:0 4px 24px rgba(0,0,0,.3)">
+            <img src="slide 2 - old way.png" alt="Old Process — Manual Dashboard Creation" style="width:100%;max-width:700px;border-radius:14px;border:1px solid rgba(251,113,133,.2);box-shadow:0 4px 24px rgba(0,0,0,.3)">
           </div>
           <!-- Q1 2026 MANDATE — styled card -->
-          <div style="flex:0.6;background:linear-gradient(135deg,rgba(30,41,59,.95),rgba(15,23,42,.98));border:1px solid rgba(247,201,72,.25);border-radius:16px;padding:20px 18px;display:flex;flex-direction:column;gap:12px;box-shadow:0 4px 24px rgba(0,0,0,.3)">
-            <div style="background:linear-gradient(135deg,#f7c948,#ff6b35);border-radius:10px;padding:10px 14px;text-align:center">
-              <div style="font-family:var(--fm);font-size:10px;letter-spacing:3px;color:#0f172a;font-weight:800">⚡ Q1 2026 MANDATE</div>
+          <div style="flex:0.6;background:linear-gradient(135deg,rgba(30,41,59,.95),rgba(15,23,42,.98));border:1px solid rgba(247,201,72,.25);border-radius:16px;padding:24px 22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 4px 24px rgba(0,0,0,.3)">
+            <div style="background:linear-gradient(135deg,#f7c948,#ff6b35);border-radius:10px;padding:12px 16px;text-align:center">
+              <div style="font-family:var(--fm);font-size:14px;letter-spacing:3px;color:#0f172a;font-weight:800">⚡ Q1 2026 MANDATE</div>
             </div>
-            <div style="background:rgba(255,255,255,.06);border-radius:10px;padding:12px;text-align:center;border:1px solid rgba(255,255,255,.08)">
-              <div style="font-family:var(--fh);font-size:15px;font-weight:700;color:#f1f5f9" data-en="Release Dashboard Builder in Q2" data-vi="Release Dashboard Builder trong Q2">Release Dashboard Builder in Q2</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:10px;padding:14px;text-align:center;border:1px solid rgba(255,255,255,.08)">
+              <div style="font-family:var(--fh);font-size:20px;font-weight:700;color:#f1f5f9" data-en="Release Dashboard Builder in Q2" data-vi="Release Dashboard Builder trong Q2">Release Dashboard Builder in Q2</div>
             </div>
             <div style="display:flex;align-items:center;gap:8px;padding:0 4px">
-              <span style="font-size:14px">🎯</span>
-              <div style="font-family:var(--fh);font-size:12px;font-weight:700;color:var(--warm)" data-en="GOAL" data-vi="MỤC TIÊU">GOAL</div>
+              <span style="font-size:17px">🎯</span>
+              <div style="font-family:var(--fh);font-size:16px;font-weight:700;color:var(--warm)" data-en="GOAL" data-vi="MỤC TIÊU">GOAL</div>
             </div>
-            <div style="background:rgba(52,211,153,.08);border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:8px;border:1px solid rgba(52,211,153,.15)">
-              <span style="color:var(--green);font-size:14px">✅</span>
-              <span style="font-size:11px;color:#cbd5e1" data-en="Self-service: users config their own dashboards" data-vi="Tự phục vụ: user tự config dashboard">Self-service: users config their own dashboards</span>
+            <div style="background:rgba(52,211,153,.08);border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:8px;border:1px solid rgba(52,211,153,.15)">
+              <span style="color:var(--green);font-size:17px">✅</span>
+              <span style="font-size:15px;color:#cbd5e1" data-en="Self-service: users config their own dashboards" data-vi="Tự phục vụ: user tự config dashboard">Self-service: users config their own dashboards</span>
             </div>
-            <div style="display:flex;gap:8px">
-              <div style="flex:1;background:rgba(247,201,72,.06);border-radius:8px;padding:8px 10px;border:1px solid rgba(247,201,72,.15)">
-                <div style="font-size:9px;color:#94a3b8" data-en="Original estimate" data-vi="Ước tính ban đầu">Original estimate</div>
-                <div style="font-family:var(--fm);font-size:13px;font-weight:700;color:var(--warm)">~2 MONTHS</div>
-                <div style="font-size:9px;color:#64748b" data-en="basic scope by 30/4" data-vi="scope cơ bản trước 30/4">basic scope by 30/4</div>
+            <div style="display:flex;gap:10px">
+              <div style="flex:1;background:rgba(247,201,72,.06);border-radius:8px;padding:10px 12px;border:1px solid rgba(247,201,72,.15)">
+                <div style="font-size:13px;color:#94a3b8" data-en="Original estimate" data-vi="Ước tính ban đầu">Original estimate</div>
+                <div style="font-family:var(--fm);font-size:16px;font-weight:700;color:var(--warm)">~2 MONTHS</div>
+                <div style="font-size:13px;color:#64748b" data-en="basic scope by 30/4" data-vi="scope cơ bản trước 30/4">basic scope by 30/4</div>
               </div>
-              <div style="flex:1;background:rgba(148,163,184,.06);border-radius:8px;padding:8px 10px;border:1px solid rgba(148,163,184,.15)">
-                <div style="font-size:9px;color:#94a3b8" data-en="Chatbot &amp; NL" data-vi="Chatbot &amp; NL">Chatbot &amp; NL</div>
-                <div style="font-family:var(--fm);font-size:13px;font-weight:700;color:#94a3b8">TBD</div>
-                <div style="font-size:9px;color:#64748b" data-en="even longer" data-vi="còn lâu hơn">even longer</div>
+              <div style="flex:1;background:rgba(148,163,184,.06);border-radius:8px;padding:10px 12px;border:1px solid rgba(148,163,184,.15)">
+                <div style="font-size:13px;color:#94a3b8" data-en="Chatbot &amp; NL" data-vi="Chatbot &amp; NL">Chatbot &amp; NL</div>
+                <div style="font-family:var(--fm);font-size:16px;font-weight:700;color:#94a3b8">TBD</div>
+                <div style="font-size:13px;color:#64748b" data-en="even longer" data-vi="còn lâu hơn">even longer</div>
               </div>
             </div>
-            <div style="background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(99,102,241,.12));border:1px solid rgba(56,189,248,.2);border-radius:10px;padding:10px 14px;text-align:center;margin-top:auto">
-              <div style="font-family:var(--fm);font-size:10px;letter-spacing:1px;font-weight:700;color:#38bdf8" data-en="🤖 QUESTION: CAN AI AGENTS ACTUALLY HELP?" data-vi="🤖 CÂU HỎI: AI AGENTS CÓ THỰC SỰ GIÚP ĐƯỢC KHÔNG?">🤖 QUESTION: CAN AI AGENTS ACTUALLY HELP?</div>
+            <div style="background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(99,102,241,.12));border:1px solid rgba(56,189,248,.2);border-radius:10px;padding:12px 16px;text-align:center;margin-top:auto">
+              <div style="font-family:var(--fm);font-size:14px;letter-spacing:1px;font-weight:700;color:#38bdf8" data-en="🤖 QUESTION: CAN AI AGENTS ACTUALLY HELP?" data-vi="🤖 CÂU HỎI: AI AGENTS CÓ THỰC SỰ GIÚP ĐƯỢC KHÔNG?">🤖 QUESTION: CAN AI AGENTS ACTUALLY HELP?</div>
             </div>
           </div>
         </div>
@@ -1076,8 +1087,10 @@
         <div class="a3 cg cg3">
           <!-- Move 1 -->
           <div class="c" style="border-top:3px solid var(--hot)">
-            <div class="ci">🎨</div>
-            <div class="ct" data-en="① PM Vibe Codes Prototype" data-vi="① PM Vibe Code Prototype">① PM Vibe Codes Prototype</div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+              <span style="font-size:22px">🎨</span>
+              <div class="ct" style="margin-bottom:0" data-en="① PM Prototypes with AI" data-vi="① PM Tạo Prototype Với AI">① PM Prototypes with AI</div>
+            </div>
             <div class="cd"
               data-en="Non-engineer PMs use AI to prototype concepts — working UIs, not wireframes. Align stakeholders with something they can touch, not read."
               data-vi="PM không-kỹ-thuật dùng AI tạo prototype — UI chạy được, không phải wireframe. Align stakeholder bằng thứ họ sờ được, không phải đọc.">
@@ -1087,8 +1100,10 @@
           </div>
           <!-- Move 2 -->
           <div class="c" style="border-top:3px solid var(--cool)">
-            <div class="ci">🤖</div>
-            <div class="ct" data-en="② Engineer + Agents" data-vi="② Engineer + Agents">② Engineer + Agents</div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+              <span style="font-size:22px">🤖</span>
+              <div class="ct" style="margin-bottom:0" data-en="② Engineer + Agents" data-vi="② Engineer + Agents">② Engineer + Agents</div>
+            </div>
             <div class="cd"
               data-en="Engineers orchestrate AI agents on production codebase — scaffolding, boilerplate, tests, migrations. Human judgment on architecture. 10–12 weeks → 2 weeks."
               data-vi="Engineer điều phối AI agents trên production codebase — scaffold, boilerplate, test, migration. Phán đoán kiến trúc vẫn là người. 10–12 tuần → 2 tuần.">
@@ -1098,13 +1113,15 @@
           </div>
           <!-- Move 3 -->
           <div class="c" style="border-top:3px solid var(--green)">
-            <div class="ci">🔍</div>
-            <div class="ct" data-en="③ PM Explores Next" data-vi="③ PM Khám Phá Tiếp">③ PM Explores Next</div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+              <span style="font-size:22px">🔍</span>
+              <div class="ct" style="margin-bottom:0" data-en="③ PM Explores Next" data-vi="③ PM Khám Phá Tiếp">③ PM Explores Next</div>
+            </div>
             <div class="cd"
-              data-en="PM uses agents to explore the production codebase — discover data patterns, prioritize backlog, vibe-code the next concept. Loop restarts."
-              data-vi="PM dùng agents khám phá production codebase — phát hiện data patterns, ưu tiên backlog, vibe-code concept tiếp. Vòng lặp khởi động lại.">
-              PM uses agents to explore the production codebase — discover data patterns, prioritize backlog, vibe-code
-              the next concept. Loop restarts.
+              data-en="PM uses agents to explore the production codebase — discover data patterns, prioritize backlog, prototype the next concept with AI. Loop restarts."
+              data-vi="PM dùng agents khám phá production codebase — phát hiện data patterns, ưu tiên backlog, tạo prototype concept tiếp với AI. Vòng lặp khởi động lại.">
+              PM uses agents to explore the production codebase — discover data patterns, prioritize backlog, prototype
+              the next concept with AI. Loop restarts.
             </div>
           </div>
         </div>
@@ -1117,19 +1134,19 @@
       </div>
     </div>
 
-    <!-- ===== 04: STEP 1 — PM VIBE CODES ===== -->
+    <!-- ===== 04: STEP 1 — PM AI PROTOTYPING ===== -->
     <div class="s" data-slide="3">
       <div class="go gp" style="top:20%;left:-150px"></div>
       <div class="si">
-        <div class="a1 st" data-en="STEP 1 — PM VIBE CODING" data-vi="BƯỚC 1 — PM VIBE CODING">STEP 1 — PM VIBE CODING
+        <div class="a1 st" data-en="STEP 1 — PM AI PROTOTYPING" data-vi="BƯỚC 1 — PM TẠO PROTOTYPE VỚI AI">STEP 1 — PM AI PROTOTYPING
         </div>
-        <h2 class="a2 sh" data-en="From Spec Document to <span class='hl'>Working Prototype</span> in Hours"
-          data-vi="Từ Tài Liệu Spec Sang <span class='hl'>Prototype Chạy Được</span> Trong Giờ">
-          From Spec Document to <span class="hl">Working Prototype</span> in Hours
+        <h2 class="a2 sh" data-en="Specs to <span class='hl'>Working Prototype</span> in Hours"
+          data-vi="Spec to <span class='hl'>Prototype Chạy Được</span> Trong Giờ">
+          Spes to <span class="hl">Working Prototype</span> in Hours
         </h2>
         <div class="a3 cg cg2">
           <div class="c" style="border-left:3px solid var(--hot)">
-            <div class="ct" data-en="Your Vibe-Coding Recipe" data-vi="Công Thức Vibe-Coding">🧪 Your Vibe-Coding Recipe</div>
+            <div class="ct" data-en="Your AI Prototyping Recipe" data-vi="Công Thức Tạo Prototype Với AI">🧪 Your AI Prototyping Recipe</div>
             <div class="cd"
               data-en="① Start with the user story — not a feature list<br>② Describe the outcome: 'I want a dashboard builder using e-charts for display, connected to MCP, with drag-and-drop charts and configurable features abc'<br>③ Iterate with natural language to add more features<br>④ Your prototype IS the spec — show it, don't document it"
               data-vi="① Bắt đầu từ user story — không phải danh sách feature<br>② Mô tả kết quả: 'Tôi muốn một dashboard builder sử dụng e-charts để display, kết nối được vào MCP, charts có thể kéo thả, config được những tính năng abc'<br>③ Iterate bằng ngôn ngữ tự nhiên để add thêm feature<br>④ Prototype của bạn LÀ spec — show, đừng viết docs">
@@ -1140,7 +1157,7 @@
             </div>
           </div>
           <div class="c" style="border-left:3px solid var(--warm)">
-            <div class="ct" data-en="Artifacts You Can Vibe-Code" data-vi="Artifacts Bạn Có Thể Vibe-Code">🎨Artifacts You Can Vibe-Code</div>
+            <div class="ct" data-en="Artifacts You Can Prototype with AI" data-vi="Artifacts Bạn Có Thể Tạo Với AI">🎨Artifacts You Can Prototype with AI</div>
             <div class="cd"
               data-en="• Interactive prototypes — clickable UIs, not wireframes<br>• Data dashboards — with mock data stakeholders can explore<br>• Workflow demos — multi-step flows users can walk through<br>• Concept comparisons — A/B variants to discuss trade-offs<br>• Journey maps — visual paths through your product"
               data-vi="• Prototype tương tác — UI click được, không phải wireframe<br>• Dashboard dữ liệu — với mock data stakeholder khám phá được<br>• Demo workflow — flow nhiều bước user thử được<br>• So sánh concept — A/B variants thảo luận trade-off<br>• Bản đồ hành trình — đường đi trực quan qua sản phẩm">
@@ -1155,17 +1172,17 @@
         <!-- EMBEDDED VIDEO -->
         <div class="a4" style="display:flex;justify-content:center">
           <div class="video-wrap">
-            <div class="video-label" data-en="▶ DEMO: PM VIBE CODE CONCEPT"
-              data-vi="▶ DEMO: PM VIBE CODE CONCEPT">▶ DEMO: PM VIBE CODE CONCEPT</div>
+            <div class="video-label" data-en="▶ DEMO: PM AI PROTOTYPE CONCEPT"
+              data-vi="▶ DEMO: PM TẠO PROTOTYPE VỚI AI">▶ DEMO: PM AI PROTOTYPE CONCEPT</div>
             <video controls preload="metadata" poster="" style="background:#000">
               <source src="slide 4 - vibe code concept.mp4" type="video/mp4">
             </video>
           </div>
         </div>
-        <div class="a5" style="text-align:center"><span style="font-size:11px;color:var(--warm);font-weight:600"
-            data-en="💡 Key insight: Stakeholders don't read specs. They USE prototypes. Vibe coding closes the imagination gap."
-            data-vi="💡 Insight: Stakeholder không đọc spec. Họ DÙNG prototype. Vibe coding xóa khoảng cách tưởng tượng.">
-            💡 Key insight: Stakeholders don't read specs. They USE prototypes. Vibe coding closes the imagination gap.
+        <div class="a5" style="text-align:center"><span style="font-size:14px;color:var(--warm);font-weight:600"
+            data-en="💡 Key insight: Stakeholders don't read specs. They USE prototypes. AI prototyping closes the imagination gap."
+            data-vi="💡 Insight: Stakeholder không đọc spec. Họ DÙNG prototype. AI prototyping xóa khoảng cách tưởng tượng.">
+            💡 Key insight: Stakeholders don't read specs. They USE prototypes. AI prototyping closes the imagination gap.
           </span></div>
       </div>
     </div>
@@ -1303,45 +1320,50 @@
           data-vi="Agents Như <span class='hl'>Bạn Đồng Hành Khám Phá</span>">
           Agents as <span class="hl">Discovery Companions</span>
         </h2>
-        <div class="a3" style="display:flex;align-items:stretch;gap:0;justify-content:center;flex-wrap:wrap;width:100%">
-          <div style="display:flex;align-items:center;gap:8px;background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.18);border-radius:10px 0 0 10px;padding:10px 14px">
-            <span style="font-size:18px">🤖</span>
-            <div>
-              <div style="font-family:var(--fm);font-size:10px;font-weight:700;color:var(--green);letter-spacing:.5px" data-en="EXPLORE CODEBASE" data-vi="KHÁM PHÁ CODEBASE">EXPLORE CODEBASE</div>
-              <div style="font-size:9px;color:var(--t3);line-height:1.3" data-en="Agents navigate production code" data-vi="Agents duyệt production code">Agents navigate production code</div>
+        <div class="a3" style="display:flex;align-items:stretch;gap:0;justify-content:center;width:100%">
+          <!-- Step 1 -->
+          <div style="flex:1;background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.18);border-radius:12px 0 0 12px;padding:14px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:22px">🤖</span>
+              <div style="font-family:var(--fm);font-size:12px;font-weight:700;color:var(--green);letter-spacing:.5px" data-en="EXPLORE" data-vi="KHÁM PHÁ">EXPLORE</div>
             </div>
+            <div style="font-size:12px;color:var(--t3);line-height:1.4" data-en="Agents navigate production code" data-vi="Agents duyệt production code">Agents navigate production code</div>
           </div>
-          <div style="display:flex;align-items:center;font-size:14px;color:var(--green);padding:0 2px">›</div>
-          <div style="display:flex;align-items:center;gap:8px;background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.18);border-top:1px solid rgba(52,211,153,.18);border-bottom:1px solid rgba(52,211,153,.18);padding:10px 14px">
-            <span style="font-size:18px">📊</span>
-            <div>
-              <div style="font-family:var(--fm);font-size:10px;font-weight:700;color:var(--green);letter-spacing:.5px" data-en="SURFACE PATTERNS" data-vi="TÌM PATTERNS">SURFACE PATTERNS</div>
-              <div style="font-size:9px;color:var(--t3);line-height:1.3" data-en="Data patterns & insights emerge" data-vi="Data patterns & insights nổi lên">Data patterns &amp; insights emerge</div>
+          <div style="display:flex;align-items:center;font-size:18px;color:var(--green);padding:0 4px">→</div>
+          <!-- Step 2 -->
+          <div style="flex:1;background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.18);padding:14px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:22px">📊</span>
+              <div style="font-family:var(--fm);font-size:12px;font-weight:700;color:var(--green);letter-spacing:.5px" data-en="PATTERNS" data-vi="PATTERNS">PATTERNS</div>
             </div>
+            <div style="font-size:12px;color:var(--t3);line-height:1.4" data-en="Data patterns & insights emerge" data-vi="Data patterns & insights nổi lên">Data patterns &amp; insights emerge</div>
           </div>
-          <div style="display:flex;align-items:center;font-size:14px;color:var(--green);padding:0 2px">›</div>
-          <div style="display:flex;align-items:center;gap:8px;background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.18);padding:10px 14px">
-            <span style="font-size:18px">💡</span>
-            <div>
-              <div style="font-family:var(--fm);font-size:10px;font-weight:700;color:var(--cool);letter-spacing:.5px" data-en="DISCOVER NEXT" data-vi="PHÁT HIỆN TIẾP">DISCOVER NEXT</div>
-              <div style="font-size:9px;color:var(--t3);line-height:1.3" data-en="What to build next" data-vi="Cần build gì tiếp">What to build next</div>
+          <div style="display:flex;align-items:center;font-size:18px;color:var(--green);padding:0 4px">→</div>
+          <!-- Step 3 -->
+          <div style="flex:1;background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.18);padding:14px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:22px">💡</span>
+              <div style="font-family:var(--fm);font-size:12px;font-weight:700;color:var(--cool);letter-spacing:.5px" data-en="DISCOVER" data-vi="PHÁT HIỆN">DISCOVER</div>
             </div>
+            <div style="font-size:12px;color:var(--t3);line-height:1.4" data-en="What to build next" data-vi="Cần build gì tiếp">What to build next</div>
           </div>
-          <div style="display:flex;align-items:center;font-size:14px;color:var(--warm);padding:0 2px">›</div>
-          <div style="display:flex;align-items:center;gap:8px;background:rgba(247,201,72,.06);border:1px solid rgba(247,201,72,.18);padding:10px 14px">
-            <span style="font-size:18px">📋</span>
-            <div>
-              <div style="font-family:var(--fm);font-size:10px;font-weight:700;color:var(--warm);letter-spacing:.5px" data-en="PRIORITIZE" data-vi="ƯU TIÊN">PRIORITIZE</div>
-              <div style="font-size:9px;color:var(--t3);line-height:1.3" data-en="Rank → backlog" data-vi="Xếp hạng → backlog">Rank → backlog</div>
+          <div style="display:flex;align-items:center;font-size:18px;color:var(--warm);padding:0 4px">→</div>
+          <!-- Step 4 -->
+          <div style="flex:1;background:rgba(247,201,72,.06);border:1px solid rgba(247,201,72,.18);padding:14px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:22px">📋</span>
+              <div style="font-family:var(--fm);font-size:12px;font-weight:700;color:var(--warm);letter-spacing:.5px" data-en="PRIORITIZE" data-vi="ƯU TIÊN">PRIORITIZE</div>
             </div>
+            <div style="font-size:12px;color:var(--t3);line-height:1.4" data-en="Rank → backlog" data-vi="Xếp hạng → backlog">Rank → backlog</div>
           </div>
-          <div style="display:flex;align-items:center;font-size:14px;color:var(--hot);padding:0 2px">›</div>
-          <div style="display:flex;align-items:center;gap:8px;background:rgba(255,107,53,.06);border:1px solid rgba(255,107,53,.18);border-radius:0 10px 10px 0;padding:10px 14px">
-            <span style="font-size:18px">🎨</span>
-            <div>
-              <div style="font-family:var(--fm);font-size:10px;font-weight:700;color:var(--hot);letter-spacing:.5px" data-en="VIBE-CODE" data-vi="VIBE-CODE">VIBE-CODE</div>
-              <div style="font-size:9px;color:var(--t3);line-height:1.3" data-en="Next concept → loop continues" data-vi="Concept tiếp → loop tiếp tục">Next concept → loop continues</div>
+          <div style="display:flex;align-items:center;font-size:18px;color:var(--hot);padding:0 4px">→</div>
+          <!-- Step 5 -->
+          <div style="flex:1;background:rgba(255,107,53,.06);border:1px solid rgba(255,107,53,.18);border-radius:0 12px 12px 0;padding:14px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:22px">🎨</span>
+              <div style="font-family:var(--fm);font-size:12px;font-weight:700;color:var(--hot);letter-spacing:.5px" data-en="PROTOTYPE" data-vi="PROTOTYPE">PROTOTYPE</div>
             </div>
+            <div style="font-size:12px;color:var(--t3);line-height:1.4" data-en="Next concept → loop" data-vi="Concept tiếp → loop">Next concept → loop</div>
           </div>
         </div>
         <!-- EMBEDDED VIDEO -->
@@ -1349,7 +1371,7 @@
           <div class="video-wrap">
             <div class="video-label" data-en="▶ DEMO: USING AGENTS FOR FEATURE DISCOVERY"
               data-vi="▶ DEMO: DÙNG AGENTS ĐỂ KHÁM PHÁ FEATURE">▶ DEMO: USING AGENTS FOR FEATURE DISCOVERY</div>
-            <video controls preload="metadata" poster="" style="background:#000">
+            <video controls preload="metadata" poster="" style="background:#000;max-height:36vh">
               <source src="slide 6 - Using agents for feature discovery.mp4" type="video/mp4">
             </video>
           </div>
@@ -1441,9 +1463,9 @@
             <div class="ci">✅</div>
             <div class="ct" data-en="After: AI-Powered Continuous Loop" data-vi="Sau: Vòng Lặp Liên Tục Với AI">After: AI-Powered Continuous Loop</div>
             <div class="cd"
-              data-en="PM vibe-codes prototype in hours → Engineer orchestrates agents → ships in days → PM discovers next features from codebase. Stakeholders align on interactive demos, not docs. Discovery happens in parallel with delivery."
-              data-vi="PM vibe-code prototype trong giờ → Engineer orchestrate agents → ship trong ngày → PM discover feature tiếp từ codebase. Stakeholder align trên demo tương tác, không phải docs. Discovery diễn ra song song với delivery.">
-              PM vibe-codes prototype in hours → Engineer orchestrates agents → ships in days → PM discovers next features from codebase. Stakeholders align on interactive demos, not docs. Discovery happens in parallel with delivery.
+              data-en="PM prototypes with AI in hours → Engineer orchestrates agents → ships in days → PM discovers next features from codebase. Stakeholders align on interactive demos, not docs. Discovery happens in parallel with delivery."
+              data-vi="PM tạo prototype với AI trong giờ → Engineer orchestrate agents → ship trong ngày → PM discover feature tiếp từ codebase. Stakeholder align trên demo tương tác, không phải docs. Discovery diễn ra song song với delivery.">
+              PM prototypes with AI in hours → Engineer orchestrates agents → ships in days → PM discovers next features from codebase. Stakeholders align on interactive demos, not docs. Discovery happens in parallel with delivery.
             </div>
           </div>
           <div class="c" style="border-left:3px solid var(--cool)">
@@ -1500,7 +1522,7 @@
               <text x="75" y="91" text-anchor="middle" fill="#f7c948" font-family="Be Vietnam Pro" font-weight="700"
                 font-size="9" data-en="🟡 Zone of Laziness" data-vi="🟡 Vùng Lười">🟡 Zone of Laziness</text>
             </svg>
-            <div style="font-size:10px;color:var(--t3);line-height:1.5;margin-top:2px"
+            <div style="font-size:13px;color:var(--t3);line-height:1.5;margin-top:4px"
               data-en="→ Let AI handle: status reports, boilerplate, data cleanup, meeting summaries, translations"
               data-vi="→ Để AI lo: báo cáo, boilerplate, dọn data, tóm tắt meeting, dịch thuật">→ Let AI handle: status
               reports, boilerplate, data cleanup, meeting summaries, translations</div>
@@ -1522,7 +1544,7 @@
               <text x="245" y="91" text-anchor="middle" fill="#ff6b35" font-family="Be Vietnam Pro" font-weight="700"
                 font-size="9" data-en="🔥 Zone of Obsession" data-vi="🔥 Vùng Đam Mê">🔥 Zone of Obsession</text>
             </svg>
-            <div style="font-size:10px;color:var(--t3);line-height:1.5;margin-top:2px"
+            <div style="font-size:13px;color:var(--t3);line-height:1.5;margin-top:4px"
               data-en="→ YOU own: product strategy, system architecture, UX decisions, user research, data modeling"
               data-vi="→ BẠN làm: chiến lược product, kiến trúc hệ thống, UX, user research, data modeling">→ YOU own:
               product strategy, system architecture, UX decisions, user research, data modeling</div>
@@ -1535,7 +1557,7 @@
             <span style="font-size:20px">📝</span>
             <div>
               <div style="font-family:var(--fm);font-size:13px;font-weight:700;color:var(--hot)">D</div>
-              <div style="font-size:9px;color:var(--t3)" data-en="Drafting" data-vi="Soạn Thảo">Drafting</div>
+              <div style="font-size:12px;color:var(--t3)" data-en="Drafting" data-vi="Soạn Thảo">Drafting</div>
             </div>
           </div>
           <div
@@ -1543,7 +1565,7 @@
             <span style="font-size:20px">🔍</span>
             <div>
               <div style="font-family:var(--fm);font-size:13px;font-weight:700;color:var(--cool)">R</div>
-              <div style="font-size:9px;color:var(--t3)" data-en="Research" data-vi="Nghiên Cứu">Research</div>
+              <div style="font-size:12px;color:var(--t3)" data-en="Research" data-vi="Nghiên Cứu">Research</div>
             </div>
           </div>
           <div
@@ -1551,7 +1573,7 @@
             <span style="font-size:20px">📊</span>
             <div>
               <div style="font-family:var(--fm);font-size:13px;font-weight:700;color:var(--purple)">A</div>
-              <div style="font-size:9px;color:var(--t3)" data-en="Analysis" data-vi="Phân Tích">Analysis</div>
+              <div style="font-size:12px;color:var(--t3)" data-en="Analysis" data-vi="Phân Tích">Analysis</div>
             </div>
           </div>
           <div
@@ -1559,14 +1581,14 @@
             <span style="font-size:20px">⚙️</span>
             <div>
               <div style="font-family:var(--fm);font-size:13px;font-weight:700;color:var(--green)">G</div>
-              <div style="font-size:9px;color:var(--t3)" data-en="Grunt Work" data-vi="Việc Chân Tay">Grunt Work</div>
+              <div style="font-size:12px;color:var(--t3)" data-en="Grunt Work" data-vi="Việc Chân Tay">Grunt Work</div>
             </div>
           </div>
         </div>
         <!-- Concrete examples by role -->
         <div class="cg cg2" style="margin-top:4px">
           <div class="c" style="padding:14px">
-            <div class="ct" style="font-size:12px" data-en="For PMs & Ops (DRAG examples)"
+            <div class="ct" style="font-size:14px" data-en="For PMs & Ops (DRAG examples)"
               data-vi="Cho PM & Ops (ví dụ DRAG)">For PMs & Ops (DRAG examples)</div>
             <div class="cd"
               data-en="D: Draft PRDs, release notes, stakeholder updates • R: Compare competitor features, summarize user feedback • A: Analyze survey responses, usage patterns • G: Translate docs, format reports, fill templates"
@@ -1576,7 +1598,7 @@
             </div>
           </div>
           <div class="c" style="padding:14px">
-            <div class="ct" style="font-size:12px" data-en="For Engineers & Designers (DRAG examples)"
+            <div class="ct" style="font-size:14px" data-en="For Engineers & Designers (DRAG examples)"
               data-vi="Cho Engineer & Designer (ví dụ DRAG)">For Engineers & Designers (DRAG examples)</div>
             <div class="cd"
               data-en="D: Scaffold components, API stubs, test files • R: Compare libraries, read changelogs, benchmark tools • A: Error log patterns, PR review diffs, perf profiles • G: Unit tests, SQL conversions, mock data, style migrations"
@@ -1612,7 +1634,7 @@
         <div class="a4 cg cg3">
           <div class="c" style="border-top:3px solid var(--hot)">
             <div class="ci">🎨</div>
-            <div class="ct" data-en="PM Vibe Code" data-vi="PM Vibe Code">PM Vibe Code</div>
+            <div class="ct" data-en="PM AI Prototyping" data-vi="PM Tạo Prototype Với AI">PM AI Prototyping</div>
             <div class="cd"
               data-en="Zone 1 (DRAG): Drafting UI, generating boilerplate. PM's product sense (Zone 2) decides WHAT to build — AI handles HOW to scaffold it."
               data-vi="Vùng 1 (DRAG): Soạn UI, tạo boilerplate. Product sense của PM (Vùng 2) quyết định build CÁI GÌ — AI lo scaffold NHƯ THẾ NÀO.">
@@ -1656,9 +1678,9 @@
       <div class="si" style="align-items:center">
         <div class="a1 st" data-en="YOUR PLAYBOOK" data-vi="CẨM NANG">YOUR PLAYBOOK</div>
         <h2 class="a2 sh" style="text-align:center"
-          data-en="When to <span class='hl'>Vibe Code</span> vs <span class='hl'>Deep Think</span>"
-          data-vi="Khi Nào <span class='hl'>Vibe Code</span> Khi Nào <span class='hl'>Suy Nghĩ Sâu</span>">
-          When to <span class="hl">Vibe Code</span> vs <span class="hl">Deep Think</span>
+          data-en="When to <span class='hl'>AI Prototype</span> vs <span class='hl'>Deep Think</span>"
+          data-vi="Khi Nào <span class='hl'>AI Prototype</span> Khi Nào <span class='hl'>Suy Nghĩ Sâu</span>">
+          When to <span class="hl">AI Prototype</span> vs <span class="hl">Deep Think</span>
         </h2>
         <div class="a3" style="width:100%;display:flex;justify-content:center">
           <svg viewBox="0 0 700 290" xmlns="http://www.w3.org/2000/svg" style="max-width:700px;width:100%;height:auto">
@@ -1715,13 +1737,13 @@
             <text x="350" y="158" text-anchor="middle" fill="#94a3b8" font-family="Space Mono" font-size="7"
               data-en="Split into parts" data-vi="Tách thành phần">Split into parts</text>
 
-            <!-- Box: Vibe Code / Agents -->
+            <!-- Box: AI Prototype / Agents -->
             <rect x="430" y="100" width="240" height="75" rx="12" fill="rgba(52,211,153,.08)" stroke="#34d399"
               stroke-width="2" filter="url(#gl3)" />
             <text x="550" y="124" text-anchor="middle" fill="#34d399" font-family="Be Vietnam Pro" font-weight="800"
               font-size="14">🤖</text>
             <text x="550" y="142" text-anchor="middle" fill="#f1f5f9" font-family="Be Vietnam Pro" font-weight="700"
-              font-size="11" data-en="Vibe Code / Agents" data-vi="Vibe Code / Agents">Vibe Code / Agents</text>
+              font-size="11" data-en="AI Prototype / Agents" data-vi="AI Prototype / Agents">AI Prototype / Agents</text>
             <text x="550" y="160" text-anchor="middle" fill="#94a3b8" font-family="Space Mono" font-size="7"
               data-en="Scaffold, boilerplate, explore, prototype"
               data-vi="Scaffold, boilerplate, khám phá, prototype">Scaffold, boilerplate, explore, prototype</text>
@@ -1742,8 +1764,8 @@
             <rect x="380" y="210" width="240" height="42" rx="8" fill="rgba(52,211,153,.05)" stroke="#34d399"
               stroke-width="1" />
             <text x="500" y="230" text-anchor="middle" fill="#34d399" font-family="Be Vietnam Pro" font-weight="600"
-              font-size="9" data-en="HOW parts → Agents + Vibe Code" data-vi="Phần THẾ NÀO → Agents + Vibe Code">HOW
-              parts → Agents + Vibe Code</text>
+              font-size="9" data-en="HOW parts → Agents + AI Prototype" data-vi="Phần THẾ NÀO → Agents + AI Prototype">HOW
+              parts → Agents + AI Prototype</text>
             <text x="500" y="244" text-anchor="middle" fill="#64748b" font-family="Space Mono" font-size="7"
               data-en="scaffold, tests, mock data" data-vi="scaffold, tests, mock data">scaffold, tests, mock
               data</text>
@@ -1913,7 +1935,7 @@
             <div style="display:flex;gap:10px;margin-bottom:12px">
               <div style="font-size:18px;flex-shrink:0">🎨</div>
               <div>
-                <div style="font-size:12px;font-weight:700;color:var(--t1)" data-en="PM Vibe Code" data-vi="PM Vibe Code">PM Vibe Code</div>
+                <div style="font-size:12px;font-weight:700;color:var(--t1)" data-en="PM AI Prototyping" data-vi="PM Tạo Prototype Với AI">PM AI Prototyping</div>
                 <div style="font-size:11px;color:var(--t3);line-height:1.4" data-en="Prototype concepts — replaced docs with touchable demos. Clear input → clear output." data-vi="Prototype concepts — thay docs bằng demo sờ được. Input rõ → output rõ.">
                   Prototype concepts — replaced docs with touchable demos. Clear input → clear output.</div>
               </div>
@@ -1965,8 +1987,8 @@
     let notesVisible = false;
 
     const slideNames = {
-      en: ["Title", "The Challenge", "The Loop", "① PM Vibe Code", "② AI-Driven Dev", "② How We Did It", "③ Discovery (Video)", "③ Discovery Done", "Results", "DRAG: What to Outsource", "Intelligent AI Use", "Decision Framework", "Your Move", "The Principle"],
-      vi: ["Trang Bìa", "Thách Thức", "Vòng Lặp", "① PM Vibe Code", "② AI-Driven Dev", "② Cách Chúng Tôi Làm", "③ Khám Phá (Video)", "③ Khám Phá Xong", "Kết Quả", "DRAG: Outsource Gì", "Dùng AI Thông Minh", "Cây Quyết Định", "Lượt Của Bạn", "Nguyên Tắc"]
+      en: ["Title", "The Challenge", "The Loop", "① PM AI Prototyping", "② AI-Driven Dev", "② How We Did It", "③ Discovery (Video)", "③ Discovery Done", "Results", "DRAG: What to Outsource", "Intelligent AI Use", "Decision Framework", "Your Move", "The Principle"],
+      vi: ["Trang Bìa", "Thách Thức", "Vòng Lặp", "① PM AI Prototyping", "② AI-Driven Dev", "② Cách Chúng Tôi Làm", "③ Khám Phá (Video)", "③ Khám Phá Xong", "Kết Quả", "DRAG: Outsource Gì", "Dùng AI Thông Minh", "Cây Quyết Định", "Lượt Của Bạn", "Nguyên Tắc"]
     };
 
     function buildSlideNav() {
@@ -1988,12 +2010,12 @@
       en: [
         "<strong>OPEN (~3 min):</strong> 'Hello everyone! Today the Analytics team will share our 4-week journey applying AI to our product development workflow. We hope to bring you a real use case and useful insights about current AI agent capabilities — not just for building prototypes but also for delivering software.'",
         "<strong>CHALLENGE (~1.5 min):</strong> Exactly one month ago on 6/3, meeting room 2332, final Q1 meeting of AAA initiatives — leadership mandated: release a solid Dashboard Builder in Q2. Analytics team exists to solve VNGG's data visualization — ~500 users, goal is fast self-service dashboards. Until Q4 2025, dashboard creation was manual (permissions, performance, data). External tools like Tableau/PowerBI couldn't meet all needs. Complex dashboards took weeks to months. Then Opus 4.6 arrived Feb 2026 — can AI really help in such a short timeframe? Original estimate: basic scope by 30/4. Chatbot/NL interaction: even longer. This presentation walks you through 1 month of results applying AI: from prototype, to engineer-managed agents speeding up coding, to continuous discovery of next features.",
-        "<strong>FRAMEWORK (~1.5 min):</strong> After 4 weeks applying AI to our workflow, the key lesson: at least three steps where AI makes a real difference. Step 1: PM creates high-fidelity prototype from just an idea — ready for stakeholder experience & feedback. Step 2: Engineer + Agents — from high-fidelity prototype (instead of PRD), engineer orchestrates agents like a conductor. AI handles boilerplate/scaffold, engineer owns architecture/quality. Step 3: PM uses agents to explore real codebase — discover next features, prioritize backlog, vibe-code next concept. Loop restarts. Think of it as a relay race — AI is the track that makes every handoff faster.",
-        "<strong>PM VIBE CODE (~1.5 min):</strong> Step one: PM creates interactive, high-fidelity prototype. Start from user story — describe outcome, not feature list. Like 'I want a dashboard builder using e-charts, connecting to MCP, with configurable features.' Iterate with natural language. What you create — interactive prototype with real mock data — IS the spec. Stakeholders don't read docs. They USE prototypes. Vibe coding closes the imagination gap. [Show video demo: Dashboard Builder vibe code concept with better UI/UX and MCP connection using real data.]",
+        "<strong>FRAMEWORK (~1.5 min):</strong> After 4 weeks applying AI to our workflow, the key lesson: at least three steps where AI makes a real difference. Step 1: PM creates high-fidelity prototype from just an idea — ready for stakeholder experience & feedback. Step 2: Engineer + Agents — from high-fidelity prototype (instead of PRD), engineer orchestrates agents like a conductor. AI handles boilerplate/scaffold, engineer owns architecture/quality. Step 3: PM uses agents to explore real codebase — discover next features, prioritize backlog, prototype next concept with AI. Loop restarts. Think of it as a relay race — AI is the track that makes every handoff faster.",
+        "<strong>PM AI PROTOTYPING (~1.5 min):</strong> Step one: PM creates interactive, high-fidelity prototype. Start from user story — describe outcome, not feature list. Like 'I want a dashboard builder using e-charts, connecting to MCP, with configurable features.' Iterate with natural language. What you create — interactive prototype with real mock data — IS the spec. Stakeholders don't read docs. They USE prototypes. AI prototyping closes the imagination gap. [Show video demo: Dashboard Builder AI prototype concept with better UI/UX and MCP connection using real data.]",
         "<strong>AI-DRIVEN DEV (~1 min):</strong> We moved AI from generating code snippets to delivering features end-to-end. Before: 'generate sample code', 'write a util function'. After: AI reads Jira stories, builds UI from Figma, designs APIs, integrates frontend-backend, verifies via tests. The shift: developers moved from writing code to reviewing AI output, refining specs, and handling edge cases. Same quality bar, much higher leverage.",
         "<strong>HOW WE DID IT (~1 min):</strong> Four enablers made spec-driven AI development work: 1) AI-readable specs — standardized Jira templates with clear acceptance criteria and linked Figma frames. 2) Tool integration — AI connected to Jira, Figma, codebase, CI via MCP servers. 3) Task-list execution — AI generates checklist from spec, executes each step, devs review at checkpoints. 4) Auto-verification — unit tests + browser agent E2E validate every task. Results: 60-70% faster cycle time (3 months → 1 month), higher test coverage, dev role shift from writing to reviewing.",
         "<strong>DISCOVERY VIDEO (~3-4 min):</strong> Before the next slide — demo the Dashboard Builder product after applying AI. [Play demo video. Point out: agents navigate REAL code, read REAL data models. This is not a chatbot — this is a thinking partner that can read your codebase.]",
-        "<strong>DISCOVERY DONE:</strong> Continue the loop — from explore codebase, surface patterns, discover next, prioritize, then vibe-code next concept. Discovery is now continuous, not quarterly. Example: from codebase, discover next-step features, then use AI to quickly turn them into prototypes to validate and continue the Discovery loop.",
+        "<strong>DISCOVERY DONE:</strong> Continue the loop — from explore codebase, surface patterns, discover next, prioritize, then prototype next concept with AI. Discovery is now continuous, not quarterly. Example: from codebase, discover next-step features, then use AI to quickly turn them into prototypes to validate and continue the Discovery loop.",
         "<strong>RESULTS (~1 min):</strong> After 2 months, real numbers: 5× faster concept-to-alignment — weeks to days. ~80% delivery time reduced — 10–12 weeks to 2 weeks. Discovery loop: quarterly → continuous. But more importantly: these numbers aren't the destination. This is the first lap. Each loop iteration compounds — faster discovery → better concepts → tighter delivery → more time to discover.",
         "<strong>DRAG (~1.5 min):</strong> A framework for deciding what to hand to AI: DRAG — Drafting, Research, Analysis, Grunt Work. Two zones: Capped payoff — no matter how much effort, returns plateau. Let AI handle these. Uncapped payoff — product strategy, architecture, UX decisions — you must own these. AI is like a drunk genius — brilliant but unreliable. Let AI ride shotgun. You still drive.",
         "<strong>INTELLIGENT USE:</strong> Speed is the outcome. Intelligence is the method. Connect each loop step to the principle: DRAG for mechanical work, human judgment for strategy, Fool mindset for discovery.",
@@ -2004,12 +2026,12 @@
       vi: [
         "<strong>MỞ ĐẦU (~3 phút):</strong> 'Xin chào mọi người! Hôm nay Analytics team sẽ chia sẻ về hành trình 4 tuần ứng dụng AI vào luồng phát triển sản phẩm của team. Hy vọng sẽ mang lại cho mọi người một usecase thực tế và những insights bổ ích về khả năng của AI agents hiện tại — không chỉ build prototype mà cả delivery software.'",
         "<strong>THÁCH THỨC (~1.5 phút):</strong> Vào đúng ngày này 1 tháng trước 6/3, phòng họp 2332, cuộc họp cuối Q1 của AAA initiatives — ban lãnh đạo chỉ thị: release Dashboard Builder ngon nghẻ trong Q2. Team Analytics sinh ra để giải quyết vấn đề hiển thị dữ liệu VNGG — ~500 user, mục tiêu tạo/sử dụng dashboard hiệu quả nhất. Đến Q4 2025, quy trình vẫn thủ công (phân quyền, performance, data). Tool external như Tableau/PowerBI không đáp ứng hết. Dashboard phức tạp mất tuần đến tháng. Rồi Opus 4.6 ra mắt tháng 2/2026 — AI agents có thực sự giúp được? Estimate ban đầu: scope cơ bản trước 30/4. Chatbot/NL interaction: còn lâu hơn. Bài presentation đưa mọi người đi qua kết quả 1 tháng ứng dụng AI: từ prototype, engineer quản lý agents speed up coding, đến continuous discovery feature tiếp theo.",
-        "<strong>FRAMEWORK (~1.5 phút):</strong> Đi qua 4 tuần ứng dụng AI, bài học rút ra: ít nhất 3 bước AI tạo sự khác biệt. Bước 1: PM tạo prototype high-fidelity từ 1 ý tưởng — ready cho stakeholder trải nghiệm & feedback. Bước 2: Engineer + Agents — từ prototype high-fidelity (thay vì PRD), engineer orchestrate agents như nhạc trưởng. AI xử lý boilerplate/scaffold, engineer lo architecture/quality. Bước 3: PM dùng agents explore codebase thật — discover feature tiếp, prioritize backlog, vibe-code concept tiếp. Loop bắt đầu lại. Nghĩ như relay race — AI là track làm mỗi handoff nhanh hơn.",
-        "<strong>PM VIBE CODE (~1.5 phút):</strong> Bước đầu tiên: PM tạo interactive, high-fidelity prototype. Bắt đầu từ user story — mô tả outcome, không phải feature list. Kiểu 'tôi muốn trang dashboard builder dùng e-charts, kết nối MCP, config tính năng abc'. Iterate bằng ngôn ngữ tự nhiên. Thứ bạn tạo ra — interactive prototype với mock data thật — đó chính là spec. Stakeholders không đọc tài liệu. Họ dùng prototype. Vibe coding đóng khoảng cách trí tưởng tượng. [Show video demo: Dashboard Builder vibe code concept với UI/UX tốt hơn và MCP connection dùng data thật.]",
+        "<strong>FRAMEWORK (~1.5 phút):</strong> Đi qua 4 tuần ứng dụng AI, bài học rút ra: ít nhất 3 bước AI tạo sự khác biệt. Bước 1: PM tạo prototype high-fidelity từ 1 ý tưởng — ready cho stakeholder trải nghiệm & feedback. Bước 2: Engineer + Agents — từ prototype high-fidelity (thay vì PRD), engineer orchestrate agents như nhạc trưởng. AI xử lý boilerplate/scaffold, engineer lo architecture/quality. Bước 3: PM dùng agents explore codebase thật — discover feature tiếp, prioritize backlog, tạo prototype concept tiếp với AI. Loop bắt đầu lại. Nghĩ như relay race — AI là track làm mỗi handoff nhanh hơn.",
+        "<strong>PM AI PROTOTYPING (~1.5 phút):</strong> Bước đầu tiên: PM tạo interactive, high-fidelity prototype. Bắt đầu từ user story — mô tả outcome, không phải feature list. Kiểu 'tôi muốn trang dashboard builder dùng e-charts, kết nối MCP, config tính năng abc'. Iterate bằng ngôn ngữ tự nhiên. Thứ bạn tạo ra — interactive prototype với mock data thật — đó chính là spec. Stakeholders không đọc tài liệu. Họ dùng prototype. AI prototyping đóng khoảng cách trí tưởng tượng. [Show video demo: Dashboard Builder AI prototype concept với UI/UX tốt hơn và MCP connection dùng data thật.]",
         "<strong>AI-DRIVEN DEV (~1 phút):</strong> Chuyển AI từ tạo code snippet sang deliver feature end-to-end. Trước: 'tạo code mẫu', 'viết hàm util'. Sau: AI đọc Jira stories, xây UI từ Figma, thiết kế APIs, tích hợp frontend-backend, verify qua tests. Sự chuyển đổi: developer chuyển từ viết code sang review output AI, tinh chỉnh spec, xử lý edge cases. Cùng chuẩn chất lượng, leverage cao hơn nhiều.",
         "<strong>CÁCH LÀM (~1 phút):</strong> Bốn yếu tố giúp phát triển AI theo spec hoạt động: 1) Specs AI đọc được — template Jira chuẩn hóa với acceptance criteria rõ và Figma frames đã link. 2) Tích hợp tool — AI kết nối Jira, Figma, codebase, CI qua MCP servers. 3) Thực thi theo checklist — AI tạo checklist từ spec, thực thi từng bước, dev review tại checkpoint. 4) Tự động verify — unit tests + browser agent E2E validate mọi task. Kết quả: 60-70% nhanh hơn (3 tháng → 1 tháng), test coverage cao hơn, dev chuyển từ viết sang review.",
         "<strong>DEMO SẢN PHẨM (~3-4 phút):</strong> Trước khi vào slide tiếp — demo sản phẩm Dashboard Builder sau khi ứng dụng AI. [Phát demo video. Chỉ ra: agent duyệt code THẬT, đọc data model THẬT. Đây không phải chatbot — đây là bạn đồng hành tư duy đọc được codebase.]",
-        "<strong>DISCOVERY XONG:</strong> Tiếp tục vòng lặp — từ explore codebase, surface patterns, discover next, prioritize, rồi vibe-code concept tiếp. Discovery giờ là continuous, không phải quarterly. Ví dụ: từ codebase, discover next-step features rồi dùng AI nhanh chóng thực hoá thành prototype để validate và tiếp tục vòng lặp Discovery.",
+        "<strong>DISCOVERY XONG:</strong> Tiếp tục vòng lặp — từ explore codebase, surface patterns, discover next, prioritize, rồi tạo prototype concept tiếp với AI. Discovery giờ là continuous, không phải quarterly. Ví dụ: từ codebase, discover next-step features rồi dùng AI nhanh chóng thực hoá thành prototype để validate và tiếp tục vòng lặp Discovery.",
         "<strong>KẾT QUẢ (~1 phút):</strong> Sau 2 tháng, con số thật: 5× nhanh hơn từ concept đến alignment — tuần xuống ngày. ~80% giảm delivery time — 10–12 tuần xuống 2 tuần. Discovery loop: quarterly → continuous. Nhưng quan trọng hơn: những con số này không phải điểm đến. Đây là vòng đầu tiên. Mỗi loop iteration compound — discovery nhanh hơn → concept tốt hơn → delivery tight hơn → thêm thởi gian discover.",
         "<strong>DRAG (~1.5 phút):</strong> Framework quyết định giao gì cho AI: DRAG — Drafting, Research, Analysis, Grunt Work. Hai vùng: Capped payoff — đầu tư bao nhiêu cũng không tăng thêm, giao cho AI. Uncapped payoff — product strategy, architecture, UX decisions — bạn phải tự làm. AI như thiên tài say rượu — brilliant nhưng unreliable. Để AI ngồi ghế phụ. Bạn vẫn phải cầm lái.",
         "<strong>DÙNG AI THÔNG MINH:</strong> Tốc độ là kết quả. Thông minh là phương pháp. Kết nối mỗi bước loop với nguyên tắc: DRAG cho việc cơ học, phán đoán người cho chiến lược, tư duy Fool cho khám phá.",
@@ -2077,6 +2099,20 @@
       if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
       if (e.key === 'n' || e.key === 'N') toggleNotes();
       if (e.key === 's' || e.key === 'S') toggleShort();
+      if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+      if (e.key === 'h' || e.key === 'H') { if (document.body.classList.contains('fs')) { document.body.classList.toggle('show-hdr'); } else { document.body.classList.toggle('hide-hdr'); } }
+    });
+
+    function toggleFullscreen() {
+      document.body.classList.toggle('fs');
+      if (document.body.classList.contains('fs') && !document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(()=>{});
+      } else if (!document.body.classList.contains('fs') && document.fullscreenElement) {
+        document.exitFullscreen().catch(()=>{});
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) document.body.classList.remove('fs');
     });
 
     function toggleTheme() {
