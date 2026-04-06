@@ -1147,12 +1147,83 @@
       <div class="go gh" style="bottom:-100px;left:50%"></div>
       <div class="si">
         <div class="a1 st" data-en="THE FRAMEWORK" data-vi="FRAMEWORK">THE FRAMEWORK</div>
-        <h2 class="a2 sh" data-en="The <span class='hl'>Continuous Loop</span> — 3 Moves"
-          data-vi="<span class='hl'>Vòng Lặp Liên Tục</span> — 3 Bước">
-          The <span class="hl">Continuous Loop</span> — 3 Moves
+        <h2 class="a2 sh" data-en="How AI <span class='hl'>Collapses</span> Discovery &amp; Delivery"
+          data-vi="AI <span class='hl'>Rút Gọn</span> Discovery &amp; Delivery Như Thế Nào">
+          How AI <span class="hl">Collapses</span> Discovery &amp; Delivery
         </h2>
-        <div class="a3 cg cg3">
-          <!-- Move 1 -->
+
+        <!-- Before: Infinity Loop Visualization -->
+        <div class="a3" id="loopBeforeGraph" style="position:relative">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+            <span style="font-family:var(--fm);font-size:9px;letter-spacing:3px;color:var(--rose);opacity:.85" data-en="BEFORE · THE TRADITIONAL PRODUCT FLOW" data-vi="TRƯỚC · QUY TRÌNH SẢN PHẨM TRUYỀN THỐNG">BEFORE · THE TRADITIONAL PRODUCT FLOW</span>
+            <span style="font-family:var(--fm);font-size:8px;color:var(--t3);opacity:.6;letter-spacing:1px">[P] hide</span>
+          </div>
+          <svg viewBox="0 0 800 225" style="width:100%;overflow:visible" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arr" markerWidth="7" markerHeight="7" refX="3.5" refY="2" orient="auto">
+                <path d="M0,0 L0,4 L6,2 Z" fill="rgba(251,113,133,.55)"/>
+              </marker>
+            </defs>
+            <!-- Infinity (lemniscate) path -->
+            <path d="M400,112 C415,62 500,22 590,22 C680,22 775,62 775,112 C775,162 680,202 590,202 C500,202 415,162 400,112 C385,62 300,22 210,22 C120,22 25,62 25,112 C25,162 120,202 210,202 C300,202 385,162 400,112 Z"
+              fill="rgba(251,113,133,.04)" stroke="rgba(251,113,133,.3)" stroke-width="1.5"/>
+            <!-- Flow direction arrows (top of each loop) -->
+            <path d="M222,29 L244,22 L237,35" fill="rgba(251,113,133,.45)" stroke="none"/>
+            <path d="M602,29 L624,22 L617,35" fill="rgba(251,113,133,.45)" stroke="none"/>
+            <!-- Bottom feedback arrow — faint, shows occasional loop-back -->
+            <path d="M560,198 Q400,228 240,198" fill="none" stroke="rgba(251,113,133,.18)" stroke-width="1" stroke-dasharray="4,4" marker-end="url(#arr)"/>
+            <!-- Phase labels -->
+            <text x="207" y="14" text-anchor="middle" font-family="'Space Mono',monospace" font-size="9" fill="rgba(251,113,133,.85)" letter-spacing="2" font-weight="700">① DISCOVERY</text>
+            <text x="593" y="14" text-anchor="middle" font-family="'Space Mono',monospace" font-size="9" fill="rgba(251,113,133,.85)" letter-spacing="2" font-weight="700">② DELIVERY</text>
+            <!-- Subtotals inside each loop (bottom) -->
+            <text x="207" y="194" text-anchor="middle" font-family="'Space Mono',monospace" font-size="8" fill="rgba(251,113,133,.5)">~5–8 weeks</text>
+            <text x="593" y="194" text-anchor="middle" font-family="'Space Mono',monospace" font-size="8" fill="rgba(251,113,133,.5)">~12–15 weeks</text>
+            <!-- Center crossing marker + handoff label -->
+            <circle cx="400" cy="112" r="6" fill="var(--bg)" stroke="rgba(251,113,133,.45)" stroke-width="1.5"/>
+            <text x="400" y="90" text-anchor="middle" font-family="'Space Mono',monospace" font-size="7" fill="rgba(251,113,133,.6)" letter-spacing="1">HANDOFF</text>
+            <line x1="400" y1="94" x2="400" y2="105" stroke="rgba(251,113,133,.3)" stroke-width="1" stroke-dasharray="2,2"/>
+            <!-- "rarely looped back" note -->
+            <text x="400" y="221" text-anchor="middle" font-family="'Space Mono',monospace" font-size="7" fill="rgba(100,116,139,.55)" letter-spacing=".5">↻ rarely looped back</text>
+            <!-- Discovery steps (foreignObject inside left loop) -->
+            <foreignObject x="38" y="40" width="348" height="148">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;flex-direction:column;gap:6px;padding:10px 18px;height:100%;justify-content:center">
+                <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(251,113,133,.08);border:1px solid rgba(251,113,133,.2);border-radius:6px;padding:5px 10px">
+                  <span style="font-size:11px;font-weight:600;color:#f1f5f9">🔬 User Research</span>
+                  <span style="font-family:'Space Mono',monospace;font-size:8px;background:rgba(251,113,133,.18);color:#fb7185;padding:2px 6px;border-radius:3px;white-space:nowrap">2–3 wks</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(251,113,133,.08);border:1px solid rgba(251,113,133,.2);border-radius:6px;padding:5px 10px">
+                  <span style="font-size:11px;font-weight:600;color:#f1f5f9">📄 PRD &amp; Spec Writing</span>
+                  <span style="font-family:'Space Mono',monospace;font-size:8px;background:rgba(251,113,133,.18);color:#fb7185;padding:2px 6px;border-radius:3px;white-space:nowrap">1–2 wks</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(251,113,133,.08);border:1px solid rgba(251,113,133,.2);border-radius:6px;padding:5px 10px">
+                  <span style="font-size:11px;font-weight:600;color:#f1f5f9">🎨 Design &amp; Review</span>
+                  <span style="font-family:'Space Mono',monospace;font-size:8px;background:rgba(251,113,133,.18);color:#fb7185;padding:2px 6px;border-radius:3px;white-space:nowrap">2–3 wks</span>
+                </div>
+              </div>
+            </foreignObject>
+            <!-- Delivery steps (foreignObject inside right loop) -->
+            <foreignObject x="414" y="40" width="348" height="148">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;flex-direction:column;gap:6px;padding:10px 18px;height:100%;justify-content:center">
+                <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(251,113,133,.08);border:1px solid rgba(251,113,133,.2);border-radius:6px;padding:5px 10px">
+                  <span style="font-size:11px;font-weight:600;color:#f1f5f9">⚙️ Development</span>
+                  <span style="font-family:'Space Mono',monospace;font-size:8px;background:rgba(251,113,133,.18);color:#fb7185;padding:2px 6px;border-radius:3px;white-space:nowrap">10–12 wks</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(251,113,133,.08);border:1px solid rgba(251,113,133,.2);border-radius:6px;padding:5px 10px">
+                  <span style="font-size:11px;font-weight:600;color:#f1f5f9">🧪 QA &amp; Testing</span>
+                  <span style="font-family:'Space Mono',monospace;font-size:8px;background:rgba(251,113,133,.18);color:#fb7185;padding:2px 6px;border-radius:3px;white-space:nowrap">1–2 wks</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(251,113,133,.08);border:1px solid rgba(251,113,133,.2);border-radius:6px;padding:5px 10px">
+                  <span style="font-size:11px;font-weight:600;color:#f1f5f9">🚀 Release &amp; Learn</span>
+                  <span style="font-family:'Space Mono',monospace;font-size:8px;background:rgba(251,113,133,.18);color:#fb7185;padding:2px 6px;border-radius:3px;white-space:nowrap">then start over</span>
+                </div>
+              </div>
+            </foreignObject>
+          </svg>
+          <div style="text-align:center;font-family:var(--fm);font-size:9px;color:var(--rose);letter-spacing:1px;margin-top:2px;opacity:.8">⏱ ~20+ weeks total · Sequential handoff · Discovery &amp; Delivery siloed</div>
+        </div>
+
+        <!-- 3 Continuous Loop Cards -->
+        <div class="a4 cg cg3">
           <div class="c" style="border-top:3px solid var(--hot)">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
               <span style="font-size:22px">🎨</span>
@@ -1161,11 +1232,9 @@
             <div class="cd"
               data-en="Non-engineer PMs use AI to prototype concepts — working UIs, not wireframes. Align stakeholders with something they can touch, not read."
               data-vi="PM không-kỹ-thuật dùng AI tạo prototype — UI chạy được, không phải wireframe. Align stakeholder bằng thứ họ sờ được, không phải đọc.">
-              Non-engineer PMs use AI to prototype concepts — working UIs, not wireframes. Align stakeholders with
-              something they can touch, not read.
+              Non-engineer PMs use AI to prototype concepts — working UIs, not wireframes. Align stakeholders with something they can touch, not read.
             </div>
           </div>
-          <!-- Move 2 -->
           <div class="c" style="border-top:3px solid var(--cool)">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
               <span style="font-size:22px">🤖</span>
@@ -1174,11 +1243,9 @@
             <div class="cd"
               data-en="Engineers orchestrate AI agents on production codebase — scaffolding, boilerplate, tests, migrations. Human judgment on architecture. 10–12 weeks → 2 weeks."
               data-vi="Engineer điều phối AI agents trên production codebase — scaffold, boilerplate, test, migration. Phán đoán kiến trúc vẫn là người. 10–12 tuần → 2 tuần.">
-              Engineers orchestrate AI agents on production codebase — scaffolding, boilerplate, tests, migrations.
-              Human judgment on architecture. 10–12 weeks → 2 weeks.
+              Engineers orchestrate AI agents on production codebase — scaffolding, boilerplate, tests, migrations. Human judgment on architecture. 10–12 weeks → 2 weeks.
             </div>
           </div>
-          <!-- Move 3 -->
           <div class="c" style="border-top:3px solid var(--green)">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
               <span style="font-size:22px">🔍</span>
@@ -1187,17 +1254,10 @@
             <div class="cd"
               data-en="PM uses agents to explore the production codebase — discover data patterns, prioritize backlog, prototype the next concept with AI. Loop restarts."
               data-vi="PM dùng agents khám phá production codebase — phát hiện data patterns, ưu tiên backlog, tạo prototype concept tiếp với AI. Vòng lặp khởi động lại.">
-              PM uses agents to explore the production codebase — discover data patterns, prioritize backlog, prototype
-              the next concept with AI. Loop restarts.
+              PM uses agents to explore the production codebase — discover data patterns, prioritize backlog, prototype the next concept with AI. Loop restarts.
             </div>
           </div>
         </div>
-        <div class="a4 qb" style="text-align:center"><span
-            data-en="💡 Think of it as a relay race — each step hands the baton to the next. AI is the track that makes every handoff faster."
-            data-vi="💡 Nghĩ như chạy tiếp sức — mỗi bước trao gậy cho bước sau. AI là đường đua giúp mọi lần trao gậy nhanh hơn.">
-            💡 Think of it as a relay race — each step hands the baton to the next. AI is the track that makes every
-            handoff faster.
-          </span></div>
       </div>
     </div>
 
@@ -1209,7 +1269,7 @@
         </div>
         <h2 class="a2 sh" data-en="Specs to <span class='hl'>Working Prototype</span> in Hours"
           data-vi="Spec to <span class='hl'>Prototype Chạy Được</span> Trong Giờ">
-          Spes to <span class="hl">Working Prototype</span> in Hours
+          Specs to <span class="hl">Working Prototype</span> in Hours
         </h2>
         <div class="a3 cg cg2">
           <div class="c" style="border-left:3px solid var(--hot)">
@@ -1224,7 +1284,7 @@
             </div>
           </div>
           <div class="c" style="border-left:3px solid var(--warm)">
-            <div class="ct" data-en="Artifacts You Can Prototype with AI" data-vi="Artifacts Bạn Có Thể Tạo Với AI">🎨Artifacts You Can Prototype with AI</div>
+            <div class="ct" data-en="Artifacts You Can Prototype with AI" data-vi="Artifacts Bạn Có Thể Tạo Với AI">🎨 Artifacts You Can Prototype with AI</div>
             <div class="cd"
               data-en="• Interactive prototypes — clickable UIs, not wireframes<br>• Data dashboards — with mock data stakeholders can explore<br>• Workflow demos — multi-step flows users can walk through<br>• Concept comparisons — A/B variants to discuss trade-offs<br>• Journey maps — visual paths through your product"
               data-vi="• Prototype tương tác — UI click được, không phải wireframe<br>• Dashboard dữ liệu — với mock data stakeholder khám phá được<br>• Demo workflow — flow nhiều bước user thử được<br>• So sánh concept — A/B variants thảo luận trade-off<br>• Bản đồ hành trình — đường đi trực quan qua sản phẩm">
@@ -2202,12 +2262,23 @@
       btn.title = shortMode ? 'Switch to full version' : 'Switch to short version';
     }
 
+    let beforeGraphVisible = true;
+    function toggleBeforeGraph() {
+      const g = document.getElementById('loopBeforeGraph');
+      if (!g) return;
+      beforeGraphVisible = !beforeGraphVisible;
+      g.style.display = beforeGraphVisible ? '' : 'none';
+      const hint = g.querySelector('[style*="[P]"]');
+      if (hint) hint.textContent = beforeGraphVisible ? '[P] hide' : '[P] show';
+    }
+
     document.addEventListener('keydown', e => {
       if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
       if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
       if (e.key === 'n' || e.key === 'N') toggleNotes();
       if (e.key === 's' || e.key === 'S') toggleShort();
       if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+      if (e.key === 'p' || e.key === 'P') { if (actualSlide(currentSlide) === 2) toggleBeforeGraph(); }
       if (e.key === 'h' || e.key === 'H') { if (document.body.classList.contains('fs')) { document.body.classList.toggle('show-hdr'); } else { document.body.classList.toggle('hide-hdr'); } }
     });
 
